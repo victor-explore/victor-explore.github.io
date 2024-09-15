@@ -1,0 +1,50 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Victor'
+theme = 'PaperMod'
+
+[params]
+  math = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Victor"
+    subtitle = "I talk about AI"
+    imageUrl = "https://pbs.twimg.com/profile_images/1794626761671770112/UhwIrobb_400x400.png" # optional
+    imageTitle = "Profile Picture" # optional
+    imageWidth = 120 # custom size
+    imageHeight = 120 # custom size
+
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/victor_explore"
+  [[params.socialIcons]] # optional
+    name = "github"
+    url = "https://github.com/victor-explore"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 50
