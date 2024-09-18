@@ -48,3 +48,10 @@ theme = 'PaperMod'
     name = "Categories"
     url = "/categories/"
     weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false

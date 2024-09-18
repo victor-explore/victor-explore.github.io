@@ -3,5 +3,5 @@ git add. - i want to save everything in my memory card (yrvhnically i have added
 git commit -m "describe the changes" - saves the things that i specified using git add. to the memory card
 git push - i want to push the things that i have added to the memory card to the github repository
 git remote add origin https://github.com/victor-explore/victor-explore.git - set up connection between local repository and github repository
-git push -u origin main - push the things that i have added to the memory card to the github repository's main branch
+git push origin main - push the things that i have added to the memory card to the github repository's main branch
 
