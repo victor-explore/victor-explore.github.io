@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.111.3
+      HUGO_CACHEDIR: /tmp/hugo_cache
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,10 +30,18 @@ jobs:
         with:
           hugo-version: '${HUGO_VERSION}'
           extended: true
+      - name: Cache Hugo modules
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
       - name: Build with Hugo
-        run: hugo --minify
+        run: |
+          hugo --minify
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
 
@@ -45,4 +54,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
