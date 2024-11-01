@@ -22,6 +22,10 @@ theme = 'PaperMod'
     name = "github"
     url = "https://github.com/victor-explore"
 
+  [params.social]
+    facebook_admin = "" # If you have a Facebook admin ID
+    twitter = "victor_explore" # Your Twitter handle without @
+
 [menu]
   [[menu.main]]
     identifier = "home"
