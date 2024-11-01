@@ -1,3 +1,5 @@
+
+Git commands:
 git init - insert memory card
 git add. - i want to save everything in my memory card (yrvhnically i have added all the files to staging area)
 git commit -m "describe the changes" - saves the things that i specified using git add. to the memory card
