@@ -13,3 +13,4 @@ git commit -m "your commit message"  # Commits the staged changes with a message
 git push -u origin main  # Use this for first push of the session
 For subsequent pushes, just use:
 git push  # Pushes the committed changes to the remote repository
+git push -f origin main  # Use with caution! This will overwrite remote changes
