@@ -1,9 +1,15 @@
+# 1. First verify your remote connection is correct
+git remote -v  # Should show your GitHub repository URL
+# If it shows nothing or wrong URL, then set it up with:
+git remote add origin https://github.com/victor-explore/victor-explore.git
 
-Git commands:
-git init - insert memory card
-git add. - i want to save everything in my memory card (yrvhnically i have added all the files to staging area)
-git commit -m "describe the changes" - saves the things that i specified using git add. to the memory card
-git push - i want to push the things that i have added to the memory card to the github repository
-git remote add origin https://github.com/victor-explore/victor-explore.git - set up connection between local repository and github repository
-git push origin main - push the things that i have added to the memory card to the github repository's main branch
+# 2. Add all changed files to staging
+git add .
 
+# 3. Commit changes with a message
+git commit -m "your commit message"
+
+# 4. Push changes to GitHub
+git push -u origin main  # Use this for first push of the session
+# For subsequent pushes, just use:
+git push

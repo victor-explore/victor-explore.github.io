@@ -1,4 +1,15 @@
-git remote set-url origin https://github.com/victor-explore/victor-explore.github.io.git  # Set/update the remote repository URL
-git add .  # Stage all changes in your local repository
-git commit -m "Your commit message here"  # Commit your changes with a descriptive message
-git push -f origin main  # Force push your changes to the main branch on GitHub
+1. First verify your remote connection is correct
+git remote -v  # Should show your GitHub repository URL
+If it shows nothing or wrong URL, then set it up with:
+git remote add origin https://github.com/victor-explore/victor-explore.git
+
+2. Add all changed files to staging
+git add .  # Adds all modified files to the staging area
+
+3. Commit changes with a message
+git commit -m "your commit message"  # Commits the staged changes with a message
+
+4. Push changes to GitHub
+git push -u origin main  # Use this for first push of the session
+For subsequent pushes, just use:
+git push  # Pushes the committed changes to the remote repository
