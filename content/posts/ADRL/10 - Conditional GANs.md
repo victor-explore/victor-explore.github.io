@@ -1,4 +1,14 @@
-# Conditional GANs(cGANs)
+---
+title: "Conditional GANs(cGANs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 A Conditional Generative Adversarial Network (cGAN) is a type of Generative Adversarial Network (GAN) where the generation process is conditioned on some additional information, such as class labels or data from other modalities.
 
@@ -24,9 +34,11 @@ This allows the discriminator to assess both the realism of the image and its co
 ## Objective of cGAN
 The objective function of cGAN is an extension of the GAN objective, where both the generator and discriminator are conditioned on y:
 
+<div class="math-katex-block">
 $$
 \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}(x|y)}[\log D(x|y)] + \mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z|y)|y))]
 $$
+</div>
 
 Where:
 - $G$ is the generator
@@ -46,17 +58,27 @@ The optimization process for cGANs involves alternating between training the dis
 
 The discriminator aims to maximize the probability of correctly classifying real and generated samples, conditioned on $y$:
 
+<div class="math-katex-block">
 $$
 L_D = -\mathbb{E}_{x \sim p_{data}(x|y)}[\log D(x|y)] - \mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z|y)|y))]
 $$
+</div>
 
 ### Generator Optimization
 
 The generator tries to minimize the discriminator's ability to differentiate between real and fake samples by minimizing:
 
 $$
+L_G = -\mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z|y)|y))]
+$$
+
+This is the standard form of the generator's loss in cGANs, derived from the minimax objective. However, in practice, to avoid vanishing gradients early in training, it's often implemented as:
+
+<div class="math-katex-block">
+$$
 L_G = -\mathbb{E}_{z \sim p_z(z)}[\log D(G(z|y)|y)]
 $$
+</div>
 
 During training, these two steps are alternated, with the discriminator and generator parameters updated using gradient descent (or a variant) to minimize their respective loss functions.
 

@@ -1,7 +1,20 @@
-# Variational encoding(VAEs)
+---
+title: "Variational encoding(VAEs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Problem setting
 
-- Given a set of data $D = \{x_i\}_{i=1}^N$ iid samples from some unknown distribution $p_{\text{data}}$.
+- Given a set of data points $D = (\{x_i\})_{i=1}^N$ 
+
+- Where $x_i \in \mathbb{R}^d$ are iid samples from some unknown distribution $p_{\text{data}}$.
 
 - We want to model $p_{\text{data}}$ as $p_{\theta}$ using a neural network.
 
@@ -24,25 +37,43 @@ $$ \ell(\theta) = \log \sum_z q(z|x) \frac{p_{\theta}(x, z)}{q(z|x)} $$
 
 This can be written as:
 
-$$ \ell(\theta) = \log \mathbb{E}_{q(z|x)} \left[ \frac{p_{\theta}(x, z)}{q(z|x)} \right] $$
+<div class="math">
+$$
+\ell(\theta) = \log \mathbb{E}_{q(z|x)} \left[ \frac{p_{\theta}(x, z)}{q(z|x)} \right]
+$$
+</div>
 
 By Jensen's inequality, we have:
 
-$$ \log \mathbb{E}_{q(z|x)} \left[ \frac{p_{\theta}(x, z)}{q(z|x)} \right] \geq \mathbb{E}_{q(z|x)} \left[ \log \frac{p_{\theta}(x, z)}{q(z|x)} \right] $$
-
+<div class="math">
+$$
+\log \mathbb{E}_{q(z|x)} \left[ \frac{p_{\theta}(x, z)}{q(z|x)} \right] \geq \mathbb{E}_{q(z|x)} \left[ \log \frac{p_{\theta}(x, z)}{q(z|x)} \right]
+$$
+</div>
 Hence, we have:
 
+<div class="math">
 $$ \ell(\theta) \geq \mathbb{E}_{q(z|x)} \left[ \log \frac{p_{\theta}(x, z)}{q(z|x)} \right] = F_{\theta}(q) $$
+</div>
 
 Where $F_{\theta}(q)$ is the evidence lower bound (ELBO).
 
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log \frac{p_{\theta}(x|z)p_{\theta}(z)}{q(z|x)} \right] $$
+</div>
 
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] + \mathbb{E}_{q(z|x)} \left[ \log \frac{p_{\theta}(z)}{q(z|x)} \right] $$
+</div>
 
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] - \mathbb{E}_{q(z|x)} \left[ \log \frac{q(z|x)}{p_{\theta}(z)} \right] $$
+</div>
 
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] - D_{KL} \left( q(z|x) \mid p_{\theta}(z) \right) $$
+</div>
+
 
 Here the first term is the conditional log likelihood of the data under the model. We want to maximise this term.
 
@@ -74,10 +105,18 @@ ELBO's first term's gradient is intractable because the sampling process is non-
 ## Reparameterisation trick
 
 Recall that we have to minimize ELBO:
+
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] - D_{KL} \left( q(z|x) \mid p_{\theta}(z) \right) $$
+</div>
 
 Focus on first term
-$$\mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right]$$
+
+<div class="math">
+$$
+\mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right]
+$$
+</div>
 
 We introduce a function $g_{\phi}(\epsilon)$ that transforms a noise variable $\epsilon$ into $z$
 
@@ -89,35 +128,59 @@ Where:
 
 This allows us to rewrite the expectation in terms of $\epsilon$
 
+<div class="math">
 $$ \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right] $$
+</div>
 
 The gradient of the first term(required for backpropagation) can then be estimated using Monte Carlo sampling:
 
+<div class="math">
 $$ \nabla_{\phi} \mathbb{E}_{q(z|x)}[\log p_{\theta}(x|z)] \approx \frac{1}{N} \sum_{i=1}^N \nabla_{\phi} [\log p_{\theta}(x|g_{\phi}(\epsilon_i))]  \quad \epsilon_i \sim p(\epsilon) $$
+</div>
 
 ### Reparameterisation trick in practice
 In practice, the reparameterization trick is implemented as follows:
 
 1. We pass a particulat data point $x_i$ through encoder network to get $\mu_{\phi}(x_i)$ and $\Sigma_{\phi}(x_i)$ which are the parameters of the distribution $q(z|x)$
 2. We sample m number of  $\epsilon_j$ from a standard normal distribution $N(0, 1)$ for $j = 1, \ldots, m$
-3. We compute $z_j^i = \mu_{\phi}(x_i) + \sigma_{\phi}(x_i) \odot \epsilon_j$ for $j = 1, \ldots, m$, where $m$ is the number of latent variables we want to sample, and $\sigma_{\phi}(x_i) = \sqrt{\Sigma_{\phi}(x_i)}$ is the standard deviation. This gives us $m$ different $z_j^i$ values, each representing a point in the latent space.
+3. We compute 
+
+<div class="math">
+$$ z_{j}^i = \mu_{\phi}(x_i) + \sigma_{\phi}(x_i) \odot \epsilon_j $$
+</div>
+
+for $j = 1, \ldots, m$, where $m$ is the number of latent variables we want to sample, and $\sigma_{\phi}(x_i) = \sqrt{\Sigma_{\phi}(x_i)}$ is the standard deviation. This gives us $m$ different $z_j^i$ values, each representing a point in the latent space.
+
+
 4. We then pass each $z_j^i$ through the decoder network to get $m$ different data samples $\hat{x}_j^i$ where $j = 1, \ldots, m$.
 
-5. We want to compute $\mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right]$.
-   1. If we assume $p_{\theta}(x|z) = p_{\theta}(x|g_{\phi}(\epsilon)) \sim N(x; x_i, I)$, which is a model assumption. This allows us to calculate the log-likelihood $\log p_{\theta}(x|z)$ using the generated samples $\hat{x}_j^i$ and the original input $x_i$ as follows(derivation skipped):
+5. We want to compute 
+
+<div class="math">
+$$
+\mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right]
+$$
+</div>
+
+- If we assume $p_{\theta}(x|z) = p_{\theta}(x|g_{\phi}(\epsilon)) \sim N(x; x_i, I)$, which is a model assumption. This allows us to calculate the log-likelihood $\log p_{\theta}(x|z)$ using the generated samples $\hat{x}_j^i$ and the original input $x_i$ as follows(derivation skipped):
  
-     $$ \mathbb{E}_{q(x|z)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right] \approx \frac{1}{m} \sum_{j=1}^m \log p_{\theta}(x|g_{\phi}(\epsilon_j)) \propto \frac{1}{m} \sum_{j=1}^m \|x_i - \hat{x}_j^i\|_2^2 $$
+<div class="math">
+$$ \mathbb{E}_{q(x|z)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right] \approx \frac{1}{m} \sum_{j=1}^m \log p_{\theta}(x|g_{\phi}(\epsilon_j)) \propto \frac{1}{m} \sum_{j=1}^m \|x_i - \hat{x}_j^i\|_2^2 $$
+</div>
 
-     1. Alternatively, if we assume $p_{\theta}(x|z) = p_{\theta}(x|g_{\phi}(\epsilon))$ follows a Bernoulli distribution, which is often used for binary data, we can calculate the log-likelihood as follows:
+- Alternatively, if we assume $p_{\theta}(x|z) = p_{\theta}(x|g_{\phi}(\epsilon))$ follows a Bernoulli distribution, which is often used for binary data, we can calculate the log-likelihood as follows:
 
-        $$ \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right] \approx \frac{1}{m} \sum_{j=1}^m \sum_{t=1}^T x_i^t \log(\hat{x}_j^{i,t}) + (1-x_i^t) \log(1-\hat{x}_j^{i,t}) $$
+<div class="math">
+$$ \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] = \mathbb{E}_{p(\epsilon)} \left[ \log p_{\theta}(x|g_{\phi}(\epsilon)) \right] \approx \frac{1}{m} \sum_{j=1}^m \sum_{t=1}^T x_i^t \log(\hat{x}_j^{i,t}) + (1-x_i^t) \log(1-\hat{x}_j^{i,t}) $$
+</div>
 
-        Where:
-        - $x_i^t$ is the t-th dimension of the i-th input data point
-        - $\hat{x}_j^{i,t}$ is the t-th dimension of the j-th reconstructed sample for the i-th input
-        - T is the dimensionality of the input data
+Where:
+   - $x_i^t$ is the t-th dimension of the i-th input data point
+   - $\hat{x}_j^{i,t}$ is the t-th dimension of the j-th reconstructed sample for the i-th input
+   - T is the dimensionality of the input data
 
      This formulation is particularly useful for tasks like image generation where pixel values can be treated as binary (black or white) or probabilities of being active.
+
 6. Propagate the gradient of the log-likelihood with respect to the model parameters $\theta$ to update the decoder network parameters.
 7. Backpropagate through the encoder network to update its parameters $\phi$.
 
@@ -126,7 +189,9 @@ In practice, the reparameterization trick is implemented as follows:
 
 Recall that:
 
+<div class="math">
 $$ F_{\theta}(q) = \mathbb{E}_{q(z|x)} \left[ \log p_{\theta}(x|z) \right] - D_{KL} \left( q(z|x) \mid p_{\theta}(z) \right) $$
+</div>
 
 the second term is:
 

@@ -1,4 +1,15 @@
-# SMLD as SDE
+---
+title: "SMLD as SDE"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Step 1 of big picture  (Stochastic forward process to continuous SDE)
 We know SMLD (Score Matching with Langevin Dynamics) forward process is:
    $$x_i = x_{i-1} + \sqrt{\sigma_{t+1}^2 - \sigma_t^2}z_{i-1}, \quad z_{i-1} \sim \mathcal{N}(0,I)$$

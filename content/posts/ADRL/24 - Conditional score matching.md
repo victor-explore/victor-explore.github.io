@@ -1,4 +1,15 @@
-# Conditional score matching
+---
+title: "Conditional score matching"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 When we had unlabeled data, we estimated the score function:
 
 $$s(x) = \nabla_x \log p(x)$$
@@ -58,5 +69,5 @@ Train a conditional score model $p(x|y)$ with conditioning dropout:
     - The unconditional model emerges from training with dropped conditions
   - During sampling:
     - Can interpolate between conditional and unconditional by:
-      $$s_\theta(x|y)_{CFG} = (1+w)s_\theta(x|y) - w s_\theta(x|\text{null})$$
+      <div class="math-katex">$$s_\theta(x|y)_{CFG} = (1+w)s_\theta(x|y) - w s_\theta(x|\text{null})$$</div>
       where $w$ controls the classifier-free guidance strength

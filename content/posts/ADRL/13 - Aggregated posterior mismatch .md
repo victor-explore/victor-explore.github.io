@@ -1,10 +1,20 @@
-# Aggregated posterior mismatch
+---
+title: "Aggregated posterior mismatch"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Why did we not have such a problem in EM algorithm?
 
 The Variational Autoencoder (VAE) architecture can be visualized as follows:
 
-<div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/24.JPG" alt="Variational Autoencoder Architecture" width="800" height="auto"/></div>
+<div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/24.JPG" alt="Variational Autoencoder Architecture" width="900" height="auto"/></div>
 
 Before expanding the KL divergence term, recall that:
 
@@ -26,13 +36,19 @@ Using the properties of logarithms:
 $$ D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z|x))= \int q_{\phi}(z|x) [\log q_{\phi}(z|x) - \log p_{\theta}(x,z) + \log p_{\theta}(x)] dz $$
 
 Since $\log p_{\theta}(x)$ is constant with respect to $z$:
+
+<div class="katex-math">
 $$ D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z|x))= \log p_{\theta}(x) + \mathbb{E}_{q_{\phi}(z|x)}\left[\log \frac{q_{\phi}(z|x)}{p_{\theta}(x,z)}\right] $$
+</div>
 
 Using the joint probability decomposition $p_{\theta}(x,z) = p_{\theta}(x)p_{\theta}(z)$:
 $$ D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z|x))= \log p_{\theta}(x) + \int q_{\phi}(z|x) \log \frac{q_{\phi}(z|x)}{p_{\theta}(x)p_{\theta}(z)} dz $$
 
 Rearranging the fraction inside the expectation:
+
+<div class="katex-math">
 $$ D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z|x))= \log p_{\theta}(x) - \mathbb{E}_{q_{\phi}(z|x)}\left[\log \frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right] $$
+</div>
 
 By definition of the evidence lower bound (ELBO):
 $$ D_{KL}(q_{\phi}(z|x) \| p_{\theta}(z|x))= \log p_{\theta}(x) - F_{\theta}(q_{\phi}) $$

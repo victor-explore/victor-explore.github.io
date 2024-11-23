@@ -1,5 +1,14 @@
-# Wasserstein GANs (WGANs)
-
+---
+title: "Wasserstein GANs (WGANs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Perfect Discriminator theorem
 
 The Perfect Discriminator theorem states that if two distributions $p_x$ and $q_x$ have support on two disjoint subsets $M$ and $P$ respectively, there always exists a discriminator $D^*: x \rightarrow [0,1]$ that has accuracy 1:
@@ -28,7 +37,11 @@ $$\theta^* = \underset{\theta}{\argmin} \, \inf_{\gamma \in \Gamma(P_{data},P_{g
 
 use Kantorovich-Rubinstein duality to get (*derivation skipped*):
 
-$$\theta^* = \underset{\theta}{\argmin} \, \sup_{f \in \text{Lip}_1} \mathbb{E}_{x \sim P_{data}}[f(x)] - \mathbb{E}_{x \sim P_{generator}}[f(x)] \qquad \qquad (eqn - 1)$$ 
+<div class="math">
+$$
+\theta^* = \underset{\theta}{\argmin} \, \sup_{f \in \text{Lip}_1} \mathbb{E}_{x \sim P_{data}}[f(x)] - \mathbb{E}_{x \sim P_{generator}}[f(x)] \qquad \qquad (eqn - 1)
+$$
+</div>
 
 where $f$ is a 1-Lipschitz function.
 
@@ -43,7 +56,11 @@ $$|f(x) - f(y)| \leq 1 |x-y|$$
 ## How to enforce 1-Lipschitz constraint?
 We use neural networks with parameter $\omega$ to model $f$, hence we can rewrite (1) as:
 
-$$\theta^* = \underset{\theta}{\argmin} \, \max_{\omega} \mathbb{E}_{x \sim P_{data}}[f(x)] - \mathbb{E}_{x \sim P_{generator}}[f(x)]$$
+<div class="math">
+$$
+\theta^* = \underset{\theta}{\argmin} \, \max_{\omega} \mathbb{E}_{x \sim P_{data}}[f(x)] - \mathbb{E}_{x \sim P_{generator}}[f(x)]
+$$
+</div>
 
 <div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/11.JPG" alt="Image Description" width="500" height="auto"/></div>
 

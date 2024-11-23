@@ -1,11 +1,21 @@
-
-# F-Divergence
+---
+title: "F-Divergence"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 F-divergence is a generalized measure of difference between two probability distributions. For probability distributions $P$ and $Q$ over a event space $X$, the F-divergence is defined as:
 
 $$D_f(P || Q) = ∫_X q(x) f(\frac{p(x)}{q(x)}) dx$$
 Where:
-- **Generator function**  $f: R^+ → R$ is a lower semi-continuous convex function with $f(1) = 0$. The F in F-divergence comes from generator "f"unction.
+- **Generator function**  $f: R^+ → R$ is a lower semi-continuous convex function with $f(1) = 0$.
+- The F in F-divergence comes from generator "f"unction.
 - $p(x)$ and $q(x)$ are the probability density functions of $P$ and $Q$ respectively
 
 Some examples of F-divergences include:
@@ -50,7 +60,7 @@ We'll prove both directions:
    $$D_f(P || Q) = \int_X q(x) f(\frac{p(x)}{p(x)}) dx$$
    $$D_f(P || Q) = \int_X q(x) f(1) dx$$
    $$D_f(P || Q) = f(1) \int_X q(x) dx$$
-   $$D_f(P || Q) = f(1) * 1 = 0$$
+   $$D_f(P || Q) = f(1) \times 1 = 0$$
    
    Since $f(1) = 0$ by definition of F-divergence.
 
@@ -90,12 +100,14 @@ Then:
 $D_f(P || Q) = \int_X p(x) f(\frac{p(x)}{q(x)}) dx$
 $= 0.3 f(\frac{0.3}{0.7}) + 0.7 f(\frac{0.7}{0.3})$
 $= 0.3 (\frac{0.3}{0.7} \log(\frac{0.3}{0.7})) + 0.7 (\frac{0.7}{0.3} \log(\frac{0.7}{0.3}))$
-$\approx -0.1209 + 0.9650 = 0.8441$
+$\approx -0.1209 + 0.9650$
+$= 0.8441$
 
 $D_f(Q || P) = \int_X q(x) f(\frac{q(x)}{p(x)}) dx$
 $= 0.7 f(\frac{0.7}{0.3}) + 0.3 f(\frac{0.3}{0.7})$
 $= 0.7 (\frac{0.7}{0.3} \log(\frac{0.7}{0.3})) + 0.3 (\frac{0.3}{0.7} \log(\frac{0.3}{0.7}))$
-$\approx 1.3786 - 0.0518 = 1.3268$
+$\approx 1.3786 - 0.0518$
+$= 1.3268$
 
 In this case, $D_f(P || Q) \approx 0.8441 \neq D_f(Q || P) \approx 1.3268$.
 

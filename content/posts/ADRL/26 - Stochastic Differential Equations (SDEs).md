@@ -1,4 +1,15 @@
-# Stochastic Differential Equations (SDEs)
+---
+title: "Stochastic Differential Equations (SDEs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Big picture of what we are going to do:
   <div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/42.PNG" alt="Image Description" width="800" height="auto"/></div> 
 

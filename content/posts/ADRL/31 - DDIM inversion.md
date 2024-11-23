@@ -1,5 +1,14 @@
-
-# DDIM inversion
+---
+title: "DDIM inversion"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## $X_T$ to $X_0$
 For $\sigma = 0$, the DDIM process becomes deterministic:

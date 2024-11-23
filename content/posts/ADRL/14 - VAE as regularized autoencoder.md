@@ -1,18 +1,31 @@
-# VAE as regularized autoencoder
-
+---
+title: "VAE as regularized autoencoder"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Understanding VAE as a Regularized Autoencoder
 
 Recall that the Variational Autoencoder (VAE) objective is given by:
 
+<div class="math-katex">
 $$ F_{\theta}(q) = \mathbb{E}_{q_{\phi}(z|x)} \left[ \log p_{\theta}(x|z) \right] - D_{KL} \left( q_{\phi}(z|x) \| p(z) \right) $$
+</div>
 
 We can rewrite this as:
 
+<div class="math-katex">
 $$ F_{\theta}(q) = \mathbb{E}_{q_{\phi}(z|x)} \left[ \|x - \hat{x}\|^2 \right] - D_{KL} \left( q_{\phi}(z|x) \| p(z) \right) $$
+</div>
 
 Where:
-- $\mathbb{E}_{q_{\phi}(z|x)} \left[ \|x - \hat{x}\|^2 \right]$ is the reconstruction error
-- $D_{KL} \left( q_{\phi}(z|x) \| p(z) \right)$ is the KL divergence, which acts as a regularizer
+- The first term is the reconstruction error
+- The second term acts as a regularizer
 
 This formulation shows that the VAE objective can be interpreted as a regularized autoencoder, where the regularization term encourages the latent distribution to be close to the prior $p(z)$.
 
@@ -35,7 +48,9 @@ However, the prior does not need to be on the parameters $\theta$; it can also b
 <div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/27.JPG" alt="Variational Autoencoder Architecture" width="500" height="auto"/></div>
 Thus, the VAE objective:
 
+<div class="math-katex">
 $$ F_{\theta}(q) = \mathbb{E}_{q_{\phi}(z|x)} \left[ \|x - \hat{x}\|^2 \right] - D_{KL} \left( q_{\phi}(z|x) \| p(z) \right) $$
+</div>
 
 can be seen as a form of regularized ERM with a prior on the output of the latent space.
 
@@ -43,10 +58,12 @@ can be seen as a form of regularized ERM with a prior on the output of the laten
 
 Beta VAEs are an extension of Variational Autoencoders (VAEs) that introduce a hyperparameter $\beta$ to control the trade-off between reconstruction accuracy and latent space regularization. The objective function is given by:
 
+<div class="math-katex">
 $$ F_{\theta}(q) = \mathbb{E}_{q_{\phi}(z|x)} \left[ \|x - \hat{x}\|^2 \right] + \beta D_{KL} \left( q_{\phi}(z|x) \| p(z) \right) $$
+</div>
 
 Where:
-- The first term $\mathbb{E}_{q_{\phi}(z|x)} \left[ \|x - \hat{x}\|^2 \right]$ is the reconstruction loss, measuring how well the model reconstructs input $x$ from latent $z$
+- The first term is the reconstruction loss, measuring how well the model reconstructs input $x$ from latent $z$
 - The second term $D_{KL} \left( q_{\phi}(z|x) \| p(z) \right)$ is the KL divergence regularizer ensuring the learned latent distribution matches the prior
 - The hyperparameter $\beta$ controls the regularization strength:
   - When $\beta = 1$, this reduces to the standard VAE

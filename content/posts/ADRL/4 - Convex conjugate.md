@@ -1,4 +1,16 @@
-# Convex conjugate (also known as the Fenchel conjugate or the Legendre transform)
+---
+title: "Convex conjugate"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
+Convex conjugate is also known as the Fenchel conjugate or the Legendre transform
 
 ## Definition
 
@@ -17,11 +29,13 @@ Where:
    
 Proof: Let $y_1, y_2 \in \mathbb{R}^n$ and $\lambda \in [0,1]$. We need to show that: 
 
-$$f^*(\lambda y_1 + (1-\lambda)y_2) \leq \lambda f^*(y_1) + (1-\lambda)f^*(y_2)$$
+<div class="math-block">
+$$ f^*(\lambda y_1 + (1-\lambda)y_2) \leq \lambda f^*(y_1) + (1-\lambda)f^*(y_2) $$
+</div>
 
-1. The definition states: $f^*(y) = \sup_{x \in \text{dom} f} (y^T x - f(x))$
-2. Here, our $y$ is $\lambda y_1 + (1-\lambda)y_2$
-3. Substituting this into the definition gives us:
+- The definition states: $f^*(y) = \sup_{x \in \text{dom} f} (y^T x - f(x))$
+- Here, our $y$ is $\lambda y_1 + (1-\lambda)y_2$
+- Substituting this into the definition gives us:
    $$f^*(\lambda y_1 + (1-\lambda)y_2) = \sup_{x} \{(\lambda y_1 + (1-\lambda)y_2)^T x - f(x)\}$$
 
 Next step will distribute the transpose operation and separate the terms:
@@ -36,8 +50,9 @@ $$f^*(\lambda y_1 + (1-\lambda)y_2) \leq  \sup_{x} \lambda\{y_1^T x - f(x)\} + \
 
 $$f^*(\lambda y_1 + (1-\lambda)y_2) \leq  \lambda \sup_{x} \{y_1^T x - f(x)\} + (1-\lambda) \sup_{x} \{y_2^T x - f(x)\}$$
 
-$$f^*(\lambda y_1 + (1-\lambda)y_2) \leq \lambda f^*(y_1) + (1-\lambda)f^*(y_2)$$
-
+<div class="math-block">
+$$ f^*(\lambda y_1 + (1-\lambda)y_2) \leq \lambda f^*(y_1) + (1-\lambda)f^*(y_2) $$
+</div>
 Thus, $f^*$ is convex.
 
 ### 2. **Conjugate of conjugate**: $f^{**}(y) = f(y)$

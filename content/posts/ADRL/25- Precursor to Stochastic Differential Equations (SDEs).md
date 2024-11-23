@@ -1,4 +1,15 @@
-# Precursor: Stochastic Differential Equations (SDEs)
+---
+title: "Precursor: Stochastic Differential Equations (SDEs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Motivation
 We explored different sampling methods for generative models:
 

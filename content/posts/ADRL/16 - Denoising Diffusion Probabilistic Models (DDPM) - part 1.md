@@ -1,4 +1,14 @@
-# Denoising Diffusion Probabilistic Models (DDPM) - part 1
+---
+title: "Denoising Diffusion Probabilistic Models (DDPM) - part 1"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## DDPM as special case of variational autoencoders (VAE)
 
@@ -45,26 +55,32 @@ $$p_\theta(X_0) = \int p_\theta(X_{0:T}) \, dX_{1:T}$$
 However, this is not tractable to compute directly. Instead, we can use the Evidence Lower Bound (ELBO) to optimize our model.
 
 Recall the Evidence Lower Bound (ELBO) in general is given by:
-
+<div class="math-katex">
 $$ F_\theta(q) \geq \mathbb{E}_{q_{\phi}(z|x)} \left[ \log p_\theta(x|z) \right] - D_{KL} \left( q_{\phi}(z|x) \| p(z) \right) = ELBO$$
-
+</div>
 substitute $q_{\phi}(z|x)$ with $q(X_{1:T}|X_0)$ and $p(z)$ with $p(X_{1:T})$:
-
+<div class="math-katex">
 $$ F_\theta(q) \geq \mathbb{E}_{q(X_{1:T}|X_0)} \left[ \log p_\theta(X_0|X_{1:T}) \right] - D_{KL} \left( q(X_{1:T}|X_0) \| p(X_{1:T}) \right) = ELBO $$
-
+</div>
 KL divergence is given by:
 $$ D_{KL} \left( q(X_{1:T}|X_0) \| p(X_{1:T}) \right) = \mathbb{E}_{q(X_{1:T}|X_0)} \left[ \log \frac{q(X_{1:T}|X_0)}{p(X_{1:T})} \right] $$
 
 Hence,
+<div class="math-katex">
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)} \left[ \log p_\theta(X_0|X_{1:T}) \right] - \mathbb{E}_{q(X_{1:T}|X_0)} \left[ \log \frac{q(X_{1:T}|X_0)}{p(X_{1:T})} \right] $$
+</div>
 
-
-
+<div class="math-katex">
 $$ = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log p_\theta(X_0|X_{1:T}) + \log \frac{p_\theta(X_{1:T})}{q(X_{1:T}|X_0)}\right] $$
+</div>
 
+<div class="math-katex">
 $$ = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log \frac{p_\theta(X_0|X_{1:T})p_\theta(X_{1:T})}{q(X_{1:T}|X_0)}\right] $$
+</div>
 
+<div class="math-katex">
 $$ = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log \frac{p_\theta(X_{0:T})}{q(X_{1:T}|X_0)}\right] $$
+</div>
 
 The markov chain in reverse is also known as reverse/decoding/denoising/sampling process:
 
@@ -79,31 +95,34 @@ Where:
 - $p_\theta(X_{t-1}|X_t)$ represents the transition probability from $X_{t-1}$ to $X_t$ in the reverse process, parameterized by $\theta$ which we aim to learn
 
 Substitute $p_\theta(X_{0:T})$ in ELBO:
+<div class="math-katex">
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log \frac{p(X_T) \prod_{t=1}^T p_\theta(X_{t-1}|X_t)}{q(X_{1:T}|X_0)}\right]$$
+</div>
 
 Using the Markov property of the forward process, we can rewrite $q(X_{1:T}|X_0)$ as:
 
 $$ q(X_{1:T}|X_0) = \prod_{t=1}^T q(X_t|X_{t-1}) $$
 
 Substituting this into the ELBO equation:
-
+<div class="math-katex">
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log \frac{p(X_T) \prod_{t=1}^T p_\theta(X_{t-1}|X_t)}{\prod_{t=1}^T q(X_t|X_{t-1})}\right]$$
-
+</div>
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log \left( \frac{p(X_T) \prod_{t=1}^T p_\theta(X_{t-1}|X_t)}{q(X_1|X_0) \prod_{t=2}^T q(X_t|X_{t-1})} \right) \right]$$
 
 ## Breaking down the ELBO equation into components:
 
 1. First, we separate the log terms:
+<div class="math-katex">
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log p(X_T) + \log \left(\frac{p_\theta(X_0|X_1)}{q(X_1|X_0)}\right) + \sum_{t=2}^T \log \left(\frac{p_\theta(X_{t-1}|X_t)}{q(X_t|X_{t-1})}\right)\right]$$
-
+</div>
 Because of the Markov property $q(X_t|X_{t-1}) = q(X_t|X_{t-1},X_0)$, we can write the last term as:
-
+<div class="math-katex">
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log p(X_T) + \log \left(\frac{p_\theta(X_0|X_1)}{q(X_1|X_0)}\right) + \sum_{t=2}^T \log \left(\frac{p_\theta(X_{t-1}|X_t)}{q(X_t|X_{t-1},X_0)}\right)\right]$$
-
+</div>
 Now apply Bayes' rule(for 3 random variables) to the last term ie:
-
+<div class="math-katex">
 $$ q(X_{t-1}|X_t,X_0) = \frac{q(X_t|X_{t-1},X_0)q(X_{t-1}|X_0)}{q(X_{t-1}|X_0)} $$
-
+</div>
 Substitute this in the last term of the ELBO equation and simplify($logq(x_1|x_0)$ cancels out) to get final form of the ELBO equation:
 $$ ELBO = \mathbb{E}_{q(X_{1:T}|X_0)}\left[\log p_\theta(X_0|X_1) + \log \frac{p(X_T)}{q(X_T|X_0)} + \sum_{t=2}^T \log \left(\frac{p_\theta(X_{t-1}|X_t)}{q(X_{t-1}|X_t,X_0)}\right)\right]$$
 

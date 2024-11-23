@@ -1,4 +1,14 @@
-# Denoising Diffusion Probabilistic Models (DDPM) - part 2
+---
+title: "Denoising Diffusion Probabilistic Models (DDPM) - part 2"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 We were using latent variables $X_t$ to model the data as:
 
@@ -13,23 +23,23 @@ Also:
 - $q(x_{1:T}|x_0) = \prod_{t=1}^T q(x_t|x_{t-1})$ - The posterior of all latent variables given the data is factorized using the chain rule
 
 Because the log likelihood is intractable, we constructed the ELBO of the model:
-
+<div class="math-katex">
 $$\mathcal{L} = \mathbb{E}_{q(x_{0:T|x_0})} \bigg[\log \frac{p_\theta(x_{0:T})}{q(x_{1:T|x_0})}\bigg]$$
-
+</div>
 We did algebraic manipulations to decompose ELBO into three terms: reconstruction, prior matching, and transition matching terms.
-
+<div class="math-katex">
 $$\mathcal{L} = \mathbb{E}_{q(x_{1:T}|x_0)} \left[\log p_\theta(x_0|x_1) + \log \frac{p_\theta(x_T)}{q(x_T|x_0)} + \sum_{t=2}^T \log \frac{p_\theta(x_{t-1}|x_t)}{q(x_{t-1}|x_t,x_0)}\right]$$ 
-
+</div>
 
 ## Reconstruction term
 The reconstruction term is given by:
-
+<div class="math-katex">
 $$T_1 = \mathbb{E}_{q(x_{1:T}|x_0)} \log p_\theta(x_0|x_1)$$
-
+</div>
 Since this term inside the expectation only depends on $x_1$ when predicting $x_0$, we can simplify it to $\mathbb{E}_{q(x_1|x_0)}$
-
+<div class="math-katex">
 $$T_1 = \mathbb{E}_{q(x_1|x_0)} \log p_\theta(x_0|x_1)$$
-
+</div>
 This step demonstrates that the reconstruction term only depends on $x_0$ and $x_1$, regardless of the other latent variables.
 
 Recall that the forward process is defined as:
@@ -45,25 +55,26 @@ Where:
 - $\sigma_1^2$ is a fixed variance (usually set to $\beta_1 = 1 - \alpha_1$)
 
 With this Gaussian assumption, the reconstruction term becomes:
-
+<div class="math-katex">
 $$T_1 \approx -\frac{1}{2\sigma_1^2} \mathbb{E}_{q(x_1|x_0)} \|\mu_\theta(x_1, 1) - x_0\|^2 + C$$
-
+</div>
 Where C is a constant independent of $\theta$
 
 ## Prior matching term
 
 The prior matching term is given by:
-
+<div class="math-katex">
 $$T_2 = \mathbb{E}_{q(x_{1:T}|x_0)} \left[\log \frac{p_\theta(x_T)}{q(x_T|x_0)}\right]$$
+</div>
 
-Because the term inside the expectation $\mathbb{E}_{q(x_{1:T}|x_0)}$ is independent of $x_{2:T}$, we can simplify it to $\mathbb{E}_{q(x_T |x_0)}$
-
+Because the term inside the expectation is independent of $x_{2:T}$, we can simplify it to $\mathbb{E}_{q(x_T |x_0)}$
+<div class="math-katex">
 $$T_2 = \mathbb{E}_{q(x_T|x_0)} \left[\log \frac{p_\theta(x_T)}{q(x_T|x_0)}\right]$$
-
+</div>
 This term can be simplified as:
-
+<div class="math-katex">
 $$T_2 = \mathbb{E}_{q(x_T|x_0)} \left[\log p_\theta(x_T) - \log q(x_T|x_0)\right]$$
-
+</div>
 
 $$T_2 = - D_{KL}(q(x_T|x_0) \| p_\theta(x_T))$$
 
@@ -78,16 +89,16 @@ This prior matching term is similar to the KL divergence term in Variational Aut
 ## Transition matching/ Consistency/ Denoising matching term
 
 The transition matching term is given by:
-
+<div class="math-katex">
 $$T_3 = \sum_{t=2}^T \mathbb{E}_{q(x_{1:T}|x_0)} \left[\log \frac{p_\theta(x_{t-1}|x_t)}{q(x_{t-1}|x_t,x_0)}\right]$$
-
+</div>
 Since the term inside the expectation $\mathbb{E}_{q(x_{1:T}|x_0)}$ is independent of $x_{2:T}$, we can simplify it to $\mathbb{E}_{q(x_t, x_{t-1}|x_0)}$
 $$T_3 = \sum_{t=2}^T \mathbb{E}_{q(x_t, x_{t-1}|x_0)} \left[\log \frac{p_\theta(x_{t-1}|x_t)}{q(x_{t-1}|x_t,x_0)}\right]$$
 
 It can be shown that: 
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} [D_{KL}(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))]$$
-
+</div>
 
 
 Consider the first term in the KL divergence. By applying Bayes' law, we can rewrite it as:
@@ -103,17 +114,17 @@ We know that:
 - $q(x_{t-1}|x_0) = \mathcal{N}(x_{t-1}; \sqrt{\bar{\alpha}_{t-1}}x_0, (1-\bar{\alpha}_{t-1})I)$
 
 Substituting these into the equation for $q(x_{t-1}|x_t,x_0)$, we get(Derivation skipped but it is eqn 84 in https://arxiv.org/pdf/2208.11970 ):
-
+<div class="math-katex">
 $$q(x_{t-1}|x_t,x_0) = \frac{\mathcal{N}(x_t; \sqrt{\alpha_t}x_{t-1}, (1-\alpha_t)I) \mathcal{N}(x_{t-1}; \sqrt{\bar{\alpha}_{t-1}}x_0, (1-\bar{\alpha}_{t-1})I)}{\mathcal{N}(x_t; \sqrt{\bar{\alpha}_t}x_0, (1-\bar{\alpha}_t)I)}$$
-
+</div>
 This can be simplified to:
 
 $$q(x_{t-1}|x_t,x_0) = \mathcal{N}(x_{t-1}; \mu_q(x_t,x_0), \Sigma_q(t))$$
 
 Where:
-
+<div class="math-katex">
 $$\mu_q(x_t,x_0) = \frac{\sqrt{\alpha_t}(1-\bar{\alpha}_{t-1})x_t + \sqrt{\bar{\alpha}_{t-1}}(1-\alpha_t)x_0}{1-\bar{\alpha}_t}$$
-
+</div>
 $$\Sigma_q(t) = \frac{(1-\alpha_t)(1-\bar{\alpha}_{t-1})}{1-\bar{\alpha}_t}I$$
 
 
@@ -122,9 +133,9 @@ Now, let's consider the second term in the KL divergence, $p_\theta(x_{t-1}|x_t)
 $$p_\theta(x_{t-1}|x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t), \Sigma_\theta(x_t))$$
 
 The KL divergence between two Gaussian distributions has a closed-form expression. Therefore, we can compute $T_3$ analytically:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} \left[\frac{1}{2} \left(\log \frac{|\Sigma_\theta|}{|\Sigma_q|} - d + tr(\Sigma_\theta^{-1}\Sigma_q) + (\mu_q-\mu_\theta)^T \Sigma_\theta^{-1} (\mu_q-\mu_\theta)\right)\right]$$
-
+</div>
 
 Here, $d$ is the dimensionality of the data, and $tr$ denotes the trace of a matrix.
 

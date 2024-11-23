@@ -1,4 +1,15 @@
-# Score matching part 1
+---
+title: "Score matching part 1"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Sampling as optimization
 
 In probabilistic modeling, sampling can be viewed as an optimization problem where we aim to find the most probable sample from a probability distribution. This can be formulated mathematically as:
@@ -79,9 +90,10 @@ Where:
 
 Also following assumptions were made for proving the theorm:
 1. $p(x)$ is differentiable
-2. $\mathbb{E}_{p(x)}[\|\nabla_x \log p(x)\|^2] < \infty$ for any $\theta$ & 
-   $\mathbb{E}_{p(x)}[\|\hat{s}(x; \theta)\|^2] < \infty$ for any $\theta$
-3. $p(x)\hat{s}(x; \theta) \to 0$ for any $\theta$ as $\|x\| \to \infty$
+
+2. <div class="math-katex">$\mathbb{E}_{p(x)}[\|\nabla_x \log p(x)\|^2] < \infty$ for any $\theta$</div>
+3. <div class="math-katex">$\mathbb{E}_{p(x)}[\|\hat{s}(x; \theta)\|^2] < \infty$ for any $\theta$</div>
+4. $p(x)\hat{s}(x; \theta) \to 0$ for any $\theta$ as $\|x\| \to \infty$
 
 
 

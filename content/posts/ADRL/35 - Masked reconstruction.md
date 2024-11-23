@@ -1,4 +1,15 @@
-# Masked reconstruction
+---
+title: "Masked reconstruction"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Idea
 Contrastive learning is one way to learn representations from unlabeled data. Masked reconstruction is another way.
 
@@ -17,8 +28,9 @@ Let us formalize the masked reconstruction framework:
    - Reconstruct original input: $\hat{x} \rightarrow \tilde{x} \approx x$
 
 3. The objective is to minimize reconstruction loss:
+<div class="math-katex">
    $$\mathcal{L}(\theta) = \mathbb{E}_{x \sim p_\text{data}}\left[d(x, T_\theta(\text{mask}(x)))\right]$$
-   
+   </div>
    where:
    - $d(\cdot,\cdot)$ is a distance metric (e.g. MSE, cross-entropy)
    - The expectation is taken over the data distribution

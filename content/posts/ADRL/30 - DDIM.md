@@ -1,4 +1,15 @@
-# DDIM (Denoising Diffusion Implicit Models)
+---
+title: "DDIM (Denoising Diffusion Implicit Models)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Motivation
 During inference, we often had to sequentially traverse through 1000 time steps because of the Markov property assumption, which can be computationally intensive. 
 
@@ -16,7 +27,9 @@ Reverse process:
 $$p_\theta(x_{0:T}) = p_\theta(x_T) \prod_{t=1}^{T} p_\theta(x_{t-1}|x_t)$$
 
 The training loss function $L_T$ is given by:
+<div class="math-katex">
 $$L_T = \sum_{t=1}^T \mathbb{E}_{x_0,\epsilon} \left[\|\epsilon - \epsilon_\theta(\sqrt{\alpha_t}x_0 + \sqrt{1-\alpha_t}\epsilon, t)\|^2\right]$$
+</div>
 
 where:
 - $\epsilon_\theta$ is the neural network that predicts the noise
@@ -57,9 +70,9 @@ We assume $q_\sigma(x_{t-1}|x_t,x_0)$ follows a Gaussian distribution:
 
 $$q_\sigma(x_{t-1}|x_t,x_0) = \mathcal{N}(x_{t-1}; \tilde{\mu}_t(x_t,x_0), \sigma^2\mathbb{I})$$
 
-where $\tilde{\mu}_t$ = $\sqrt{\alpha_{t-1}}x_0 + \sqrt{1-\alpha_{t-1}^2-\sigma^2}\left(\frac{x_t-\sqrt{\alpha_t}x_0}{\sqrt{1-\alpha_t}}\right)$
+where 
+<div class="math-katex">$\tilde{\mu}_t$ = $\sqrt{\alpha_{t-1}}x_0 + \sqrt{1-\alpha_{t-1}^2-\sigma^2}\left(\frac{x_t-\sqrt{\alpha_t}x_0}{\sqrt{1-\alpha_t}}\right)$</div>
 
-*derivation not done in class*
 
 This formulation:
 1. Maintains the same marginal distribution as DDPM

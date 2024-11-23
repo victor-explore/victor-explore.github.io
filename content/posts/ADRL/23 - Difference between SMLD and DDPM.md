@@ -1,4 +1,15 @@
-# Difference between SMLD and DDPM
+---
+title: "Difference between SMLD and DDPM"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 Note that: NCSN: Noise Conditional Score Network is same as SMLD: Score matching Langevin Dynamics
 
 ### Inference
@@ -25,10 +36,10 @@ The inference processes also differ between SMLD and DDPM:
 2. DDPM (Denoising Diffusion Probabilistic Models):
    - Uses a deterministic reverse process
    - Starting from random Gaussian noise, applies:
-     $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\left(x_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x_t,t)\right) + \sigma_t z$$
+     <div class="math-katex">$$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\left(x_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x_t,t)\right) + \sigma_t z$$</div>
    - Where:
      - $\alpha_t = 1 - \beta_t$
-     - $\bar{\alpha}_t = \prod_{s=1}^t \alpha_s$
+     - <div class="math-katex">$\bar{\alpha}_t = \prod_{s=1}^t \alpha_s$</div>
      - $\sigma_t^2 = \beta_t$ (simplified version)
      - $z \sim \mathcal{N}(0,I)$
    - One step per noise level

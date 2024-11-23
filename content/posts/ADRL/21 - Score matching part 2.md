@@ -1,9 +1,20 @@
-# Score matching part 2
+---
+title: "Score matching part 2"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Recap
 - $J_{ESM}(\theta) = \mathbb{E}_{p(x)} \left[ \frac{1}{2} \| \hat{s}(x; \theta) - \nabla_x \log p(x) \|^2 \right]$
 - $J_{ISM}(\theta) = \mathbb{E}_{p(x)} \left[ \frac{1}{2} \| \hat{s}(x; \theta) \|^2 + \text{tr}(\nabla_x \hat{s}(x; \theta)) \right] + C$
 - Theorem: $J_{ISM}(\theta) = J_{ESM}(\theta) + C$
-- $\theta^* = \mathop{\arg \min}_{\theta} J_{ISM}(\theta)$
+- <div class="math-katex">$\theta^* = \mathop{\arg \min}_{\theta} J_{ISM}(\theta)$</div>
 - $x_{t+1} = x_t + \alpha \cdot \hat{s}(x_t; \theta^*) + \sqrt{2\alpha} \epsilon, \quad \epsilon \sim \mathcal{N}(0, I)$
 - $\hat{s}(x; \theta)$ modelled using a neural network
   <div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/39.JPG" alt="Image Description" width="400" height="auto"/></div> 
@@ -29,8 +40,9 @@ This computational challenge motivates the need for alternative approaches to sc
 Projected score matching is a technique that involves projecting the score function onto a lower-dimensional subspace.
 
 The projected score matching loss function can be expressed as:
-
+<div class="math-katex">
 $$J_{PSM}(\theta) = \frac{1}{2} \mathbb{E}_v \mathbb{E}_{p(x)} \left[ \| v^\top \hat{s}_\theta(x) - v^\top s(x) \|^2 \right]$$
+</div>
 
 Where:
 - $\hat{s}_\theta(x)$ is the estimated score function
@@ -48,9 +60,9 @@ Hence we need to find an alternative way to compute the loss function which lead
 
 
 The SSM loss function can be expressed as:
-
+<div class="math-katex">
 $$J_{SSM}(\theta) = \mathbb{E}_v \mathbb{E}_{p(x)} \left[ \frac{1}{2}(v^\top \hat{s}_\theta(x))^2 + v^\top (\nabla_x \hat{s}_\theta(x)) v \right]$$
-
+</div>
 Where:
 - $\hat{s}_\theta(x)$ is the estimated score function
 - $v$ is a random unit vector sampled from a uniform distribution on the unit sphere
@@ -75,18 +87,23 @@ Where:
 Following assumptions were made to prove the theorem:
 
 - A1. $p(x)$ and $s(x)$ are differentiable
-- A2. $\mathbb{E}_{p(x)}[\|\nabla_x \log p(x)\|^2] < \infty$ and $\mathbb{E}_{p(x)}[\|\hat{s}(x; \theta)\|^2] < \infty$ for any $\theta$
+
+- A2:
+<div class="math-katex">$\mathbb{E}_{p(x)}[\|\nabla_x \log p(x)\|^2] < \infty$ and $\mathbb{E}_{p(x)}[\|\hat{s}(x; \theta)\|^2] < \infty$ for any $\theta$</div>
+
 - A3. $\lim_{\|x\| \to \infty} p(x)\hat{s}(x; \theta) = 0$ for any $\theta$
-- A4. $\mathbb{E}_{p_v}[(\|v\|^2)] < \infty$ and $\mathbb{E}_{p_v}[(v^Tv)] > 0$ (positive definite) - *new assumption*
+
+- A4:
+<div class="math-katex">$\mathbb{E}_{p_v}[\|v\|^2] < \infty$ and $\mathbb{E}_{p_v}[v^\top v] > 0$ (positive definite)</div>
 
 This theorem demonstrates that under certain conditions, optimizing the SSM objective is equivalent to optimizing the PSM objective, up to a constant difference. This relationship provides a theoretical foundation for the use of Sliced Score Matching as an efficient alternative to Projected Score Matching.
 
 
 ### How to compute $J_{SSM}$
 $J_{SSM}$ can be computed using Monte Carlo estimates. Given a datapoint ${x_i}$ take $m$ projections and approximate the SSM loss function as follows:
-
+<div class="math-katex">
 $$J_{SSM}(\theta) \approx \frac{1}{NM} \sum_{i=1}^N \sum_{j=1}^M \left[ \frac{1}{2}(v_j^\top \hat{s}_\theta(x_i))^2 + v_j^\top (\nabla_x \hat{s}_\theta(x_i)) v_j \right]$$
-
+</div>
 Where:
 - $N$ is the number of data samples
 - $M$ is the number of random projection vectors

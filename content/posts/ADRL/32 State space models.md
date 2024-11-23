@@ -1,4 +1,15 @@
-# State space models
+---
+title: "State space models & Mamba"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 
 ## Motivation for state space models
 - RNNs can handle variable length inputs however they are not parallelizable.

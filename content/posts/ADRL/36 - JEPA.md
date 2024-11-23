@@ -1,4 +1,14 @@
-# JEPA - Joint Embedding Prediction and Autoencoding
+---
+title: "JEPA - Joint Embedding Prediction and Autoencoding"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Idea
 Joint Embedding Predictive Architecture (JEPA) combines predictive learning with representation learning in a unified framework.
 
@@ -16,10 +26,13 @@ Let us formalize the JEPA framework:
 2. The process works as follows:
    - Encode context: $z_c = f_\theta(x_c)$
    - Encode target: $z_t = g_\phi(x_t)$ 
-   - Predict target embedding: $\hat{z}_t = h_\psi(z_c)$
+   - Predict target embedding: 
+   <div class="math-katex">$\hat{z}_t = h_\psi(z_c)$</div>
 
 3. The objective is to minimize prediction error in embedding space:
+<div class="math-katex">
    $$\mathcal{L}(\theta,\phi,\psi) = \mathbb{E}_{(x_c,x_t) \sim p_\text{data}}\left[\|z_t - \hat{z}_t\|^2\right]$$
+</div>
    
    where:
    - The expectation is over pairs of context and target patches

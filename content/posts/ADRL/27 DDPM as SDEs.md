@@ -1,4 +1,16 @@
-# DDPMs as SDEs
+---
+title: "DDPMs as SDEs"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
+
 ## Step 1 of big picture  (Stochastic forward process to continuous SDE)
 Now let's see how DDPMs can be viewed as discretizations of SDEs.
 
@@ -27,7 +39,6 @@ Substituting into Anderson's reverse SDE formula we get:
 $$dx = \left(-\frac{\beta(t)}{2}x - \beta(t)\nabla_x(\log p_t(x))\right)dt + \sqrt{\beta(t)}dB_t$$
 
 ## Step 3 of big picture  (Continuous reverse SDE to discrete reverse process)
-*Derivation done in class - the final result is correct but the intermediate steps not checked*
 
 1. Starting with the continuous reverse SDE:
    $$dx = \left(-\frac{\beta(t)}{2}x - \beta(t)\nabla_x(\log p_t(x))\right)dt + \sqrt{\beta(t)}dB_t$$

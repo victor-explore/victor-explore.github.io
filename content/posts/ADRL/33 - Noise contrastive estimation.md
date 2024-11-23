@@ -1,4 +1,14 @@
-# Noise Contrastive Estimation
+---
+title: "Noise Contrastive Estimation"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Idea
 The core idea behind Noise Contrastive Estimation (NCE) is:
@@ -58,7 +68,7 @@ $$D_N = \{y_1, y_2, \ldots, y_t\}$$
   - $L(\theta)$ is also known as NCE estimator
 
 - From law of large numbers, we can write the expected value of the likelihood:
-  $$J(\theta) = \frac{1}{2} \mathbb{E}_{p_{DN}} [\log h_\theta(x) + \log(1-h_\theta(y))]$$
+  <div class="math-katex">$$J(\theta) = \frac{1}{2} \mathbb{E}_{p_{DN}} [\log h_\theta(x) + \log(1-h_\theta(y))]$$</div>
 
   where:
   - The expectation is taken over the joint distribution of data and noise samples

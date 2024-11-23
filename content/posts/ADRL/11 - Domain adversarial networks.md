@@ -1,4 +1,15 @@
-# Domain adversarial networks (DANs) also known as Unsupervised domain adaptation (UDA)
+---
+title: "Domain adversarial networks (DANs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+Also known as Unsupervised domain adaptation (UDA)
 
 ## Introduction
 
@@ -35,7 +46,12 @@ We can use adversarial training to learn this feature extractor. We introduce a 
 
 ### Training of feature extractor and domain discriminator
 The domain adaptation loss is given by:
-$$ \mathcal{L}_{DA} = \mathbb{E}_{x^s \sim p_s(x)}[\log(D(\phi(x^s)))] + \mathbb{E}_{x^t \sim p_t(x)}[\log(1 - D(\phi(x^t)))] $$
+
+<div class="math">
+$$
+\mathcal{L}_{DA} = \mathbb{E}_{x^s \sim p_s(x)}[\log(D(\phi(x^s)))] + \mathbb{E}_{x^t \sim p_t(x)}[\log(1 - D(\phi(x^t)))]
+$$
+</div>
 
 The feature extractor is trained to minimize this loss, while the domain discriminator is trained to maximize it.
 

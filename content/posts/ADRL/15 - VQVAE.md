@@ -1,4 +1,14 @@
-# Vector Quantized Variational Autoencoders (VQ-VAEs)
+---
+title: "Vector Quantized Variational Autoencoders (VQ-VAEs)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Vector Quantized Variational Autoencoders (VQ-VAEs) were introduced to address several limitations of regular VAEs:
 
@@ -19,8 +29,9 @@ VQ-VAEs solve these issues by using discrete latent variables through vector qua
 4. A decoder network $D_{\theta}$ that reconstructs the input from the quantized vectors: $\hat{x} = D_{\theta}(z_q)$
 
 The training objective consists of three terms:
-
+<div class="math-katex">
 $L = \underbrace{\|x - D_\theta(z_q)\|_2^2}_\text{reconstruction loss} + \underbrace{\|\text{sg}[z_e] - e_k\|_2^2}_\text{codebook loss} + \underbrace{\beta\|z_e - \text{sg}[e_k]\|_2^2}_\text{commitment loss}$
+</div>
 
 where:
 - $\text{sg}[\cdot]$ is the stop-gradient operator

@@ -1,9 +1,20 @@
-# Denoising Diffusion Probabilistic Models (DDPM) - part 3
+---
+title: "Denoising Diffusion Probabilistic Models (DDPM) - part 3"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 Recall that:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} [D_{KL}(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))]$$
-
+</div>
 Here:
+
 - $q(x_{t-1}|x_t,x_0)$ is the noising distribution after applying the forward process for $t-1$ steps
 - $p_\theta(x_{t-1}|x_t)$ is the model's predicted denoising distribution after applying the reverse process
 
@@ -13,9 +24,11 @@ $$q(x_{t-1}|x_t,x_0) = \mathcal{N}(x_{t-1}; \mu_q(x_t,x_0), \Sigma_q(t))$$
 
 where $\mu_q(x_t,x_0)$ and $\Sigma_q(t)$ are the mean and covariance of the posterior distribution and:
 
+<div class="math-katex">
 $$
 \mu_q(x_t, x_0) = \frac{\sqrt{\alpha_t}(1-\bar{\alpha}_{t-1})x_t + \sqrt{\bar{\alpha}_{t-1}}(1-\alpha_t)x_0}{1-\bar{\alpha}_t}
 $$
+</div>
 
 
 The covariance $\Sigma_q(t)$ is given by:
@@ -35,11 +48,12 @@ where $\mu_\theta(x_t, t)$ is the mean of the model's prediction and $\sigma_\th
 Note: In both the forward process ($q$) and the reverse process ($p$), the covariance matrices are assumed to be diagonal and proportional to the identity matrix. This simplification is indeed a key assumption in the DDPM model.
 
 Hence:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} [D_{KL}(q(x_{t-1}|x_t,x_0) \| p_\theta(x_{t-1}|x_t))]$$
-
+</div>
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} [D_{KL}(\mathcal{N}(\mu_q(x_t,x_0), \sigma_q^2(t)I) \| \mathcal{N}(\mu_\theta(x_t, t), \sigma_\theta^2 I))]$$
-
+</div>
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} [\frac{1}{2\sigma_\theta^2} ||\mu_q(x_t,x_0) - \mu_\theta(x_t, t)||^2]$$
 
 Notice that:
@@ -61,9 +75,9 @@ From this, we can rearrange to express $x_0$ in terms of $x_t$:
 $$x_0 = \frac{x_t - \sqrt{1-\bar{\alpha}_t} \epsilon}{\sqrt{\bar{\alpha}_t}}$$
 
 Substituting this expression for $x_0$ into the equation for $\mu_q(x_t, x_0)$, we get:
-
+<div class="math-katex">
 $$\mu_q(x_t, x_0) = \sqrt{\bar{\alpha}_t}(1-\alpha_{t-1})x_t + \sqrt{\bar{\alpha}_{t-1}}(1-\alpha_t)\left(\frac{x_t - \sqrt{1-\bar{\alpha}_t} \epsilon}{\sqrt{\bar{\alpha}_t}}\right)$$
-
+</div>
 Simplifying, we have:
 
 $$\mu_q(x_t, x_0) = \frac{1}{\sqrt{\bar{\alpha}_t}} x_t - \frac{(1-\alpha_t)}{\sqrt{1-\bar{\alpha}_t} \sqrt{\bar{\alpha}_t}} \epsilon$$
@@ -71,29 +85,29 @@ $$\mu_q(x_t, x_0) = \frac{1}{\sqrt{\bar{\alpha}_t}} x_t - \frac{(1-\alpha_t)}{\s
 Note that this is a known value.
 
 Also we can write $\mu_\theta(x_t, t)$ as:
-
+<div class="math-katex">
 $$\mu_\theta(x_t, t) = \frac{1}{\sqrt{\bar{\alpha}_t}} x_t - \frac{(1-\alpha_t)}{\sqrt{1-\bar{\alpha}_t} \sqrt{\bar{\alpha}_t}} \epsilon_\theta(x_t, t)$$
-
+</div>
 where $\epsilon_\theta(x_t, t)$ is the model's prediction for the noise at time step $t$. This can be done because we can always reparametrize one Gaussian distribution to another Gaussian distribution. 
 
 Instead of learning $\mu_\theta(x_t, t)$(learn to predict the noise), we learn $\epsilon_\theta(x_t, t)$ and then use the above equation to get $\mu_\theta(x_t, t)$.
 
 Now substitute $\mu_q(x_t, x_0)$ and $\mu_\theta(x_t, t)$ into $T_3$ we get:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} \left[\frac{1}{2\sigma_\theta^2} \left\| \left(\frac{1}{\sqrt{\bar{\alpha}_t}} x_t - \frac{(1-\alpha_t)}{\sqrt{1-\bar{\alpha}_t} \sqrt{\bar{\alpha}_t}} \epsilon\right) - \left(\frac{1}{\sqrt{\bar{\alpha}_t}} x_t - \frac{(1-\alpha_t)}{\sqrt{1-\bar{\alpha}_t} \sqrt{\bar{\alpha}_t}} \epsilon_\theta(x_t, t)\right) \right\|_2^2 \right]$$
-
+</div>
 Simplifying the expression inside the norm, we get:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} \left[\frac{1}{2\sigma_\theta^2} \left\| \frac{(1-\alpha_t)}{\sqrt{1-\bar{\alpha}_t} \sqrt{\bar{\alpha}_t}} (\epsilon - \epsilon_\theta(x_t, t)) \right\|_2^2 \right]$$
-
+</div>
 This can be further simplified to:
-
+<div class="math-katex">
 $$T_3 = - \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} \left[\frac{(1-\alpha_t)^2}{2\sigma_\theta^2 (1-\bar{\alpha}_t) \bar{\alpha}_t} \left\| \epsilon - \epsilon_\theta(x_t, t) \right\|_2^2 \right]$$
-
+</div>
 Finally, we can express the proportionality:
-
+<div class="math-katex">
 $$T_3 \propto \sum_{t=2}^T \mathbb{E}_{q(x_t|x_0)} \left\| \epsilon - \epsilon_\theta(x_t, t) \right\|_2^2$$
-
+</div>
 ## Architecture
 
 <div style="text-align: center;"><img src="https://raw.githubusercontent.com/victor-explore/ADRL-Notes/refs/heads/main/34.JPG" alt="Denoising Diffusion Probabilistic Models (DDPM) Architecture" width="500" height="auto"/></div>
@@ -135,7 +149,9 @@ The inference process in DDPM involves reversing the diffusion process to genera
 
    The reverse process is defined as:
 $x_T$ to $x_0$ through intermediate steps $x_{T-1}, \ldots, x_1$.
+<div class="math-katex">
    $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}} \left(x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}} \epsilon_\theta(x_t, t)\right) + \sigma_t z$$
+</div>
 
    where $z \sim \mathcal{N}(0, I)$ if $t > 1$, and $z = 0$ if $t = 1$ and $\sigma_t^2 = \beta_t = \frac{1-\bar{\alpha}_{t-1}}{1-\bar{\alpha}_t} \cdot (1-\alpha_t)$.
 

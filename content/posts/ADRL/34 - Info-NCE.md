@@ -1,4 +1,15 @@
-# Info-NCE
+---
+title: "Info-NCE"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 ## Idea
 Instead of using 1 negative sample, why not use more?
 
@@ -13,11 +24,13 @@ Let us formalize the Info-NCE framework:
 
 2. We sample:
    - One positive sample $x^+ \sim p_{pos}(x,c)$
-   - $N-1$ negative samples $\{x^-_i\}_{i=1}^{N-1} \sim p_{neg}(x,c)$
+   - $N-1$ negative samples 
+   <div class="math-katex">$\{x^-_i\}_{i=1}^{N-1} \sim p_{neg}(x,c)$</div>
 
 3. The InfoNCE loss is defined as:
-
+<div class="math-katex">
    $$\mathcal{L}_{\text{InfoNCE}} = -\mathbb{E}\left[\log \frac{\exp(f_\theta(x)^\top f_\theta(x^+))}{\exp(f_\theta(x)^\top f_\theta(x^+)) + \sum_{i=1}^{N-1} \exp(f_\theta(x)^\top f_\theta(x^-_i))}\right]$$
+</div>
 
    where:
    - $f_\theta: \mathcal{X} \rightarrow \mathbb{R}^d$ is a neural network encoder that maps inputs to d-dimensional embeddings

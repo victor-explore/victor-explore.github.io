@@ -1,4 +1,14 @@
-# Wasserstein metric
+---
+title: "Wasserstein metric"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Definition
 

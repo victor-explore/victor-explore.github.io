@@ -1,5 +1,14 @@
-# Frechet Inception Distance (FID)
-
+---
+title: "Frechet Inception Distance (FID)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Why generative models cannot be evaluated like discriminative models
 
 Usually, we train a deep learning model on training data and then evaluate it on test data. However, for generative models, we cannot directly compare the generated samples to the test data in the same way we evaluate discriminative models. This is because:
@@ -22,16 +31,17 @@ How to calculate FID:
 
 2. Distribution Comparison: It assumes that the feature vectors for both real and generated images follow a multidimensional Gaussian distribution.
 
-3. Statistical Moments: FID calculates the mean and covariance of the feature distributions for both real and generated images.
+3. Statistical Moments: FID calculates the mean and covariance of the feature distributions for both real and generated images. These statistical moments capture the overall characteristics of the image distributions.
 
 4. Distance Calculation: The Frechet distance between these two Gaussian distributions is then computed. This distance is defined as:
 
-   $$FID = ||μ_r - μ_g||^2 + Tr(Σ_r + Σ_g - 2(Σ_r Σ_g)^(1/2))$$
+   <div class="math-block">
+   $$FID = \|\mu_r - \mu_g\|^2 + \operatorname{Tr}(\Sigma_r + \Sigma_g - 2\sqrt{\Sigma_r \cdot \Sigma_g})$$
+   </div>
 
    Where:
-   - $μ_r$ and $μ_g$ are the mean feature vectors for real and generated images
-   - $Σ_r$ and $Σ_g$ are the covariance matrices for real and generated images
-   - $Tr$ denotes the trace of a matrix (sum of diagonal elements)
+   - $\mu_r$ and $\mu_g$ are the mean feature vectors for real and generated images
+   - $\Sigma_r$ and $\Sigma_g$ are the covariance matrices for real and generated images
 
 5. Interpretation: A lower FID score indicates that the generated images are more similar to the real images. A score of 0 would mean the two distributions are identical.
 
