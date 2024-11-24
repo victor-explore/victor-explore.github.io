@@ -10,8 +10,9 @@ theme = 'PaperMod'
     enabled = true
     title = "Victor"
     subtitle = "I talk about AI"
-    imageUrl = "https://pbs.twimg.com/profile_images/1794626761671770112/UhwIrobb_400x400.png" # optional
-    imageTitle = "Profile Picture" # optional
+    subtitle2 = "And share insights about technology, society, and personal growth"
+    imageUrl = "https://pbs.twimg.com/profile_images/1794626761671770112/UhwIrobb_400x400.png"
+    imageTitle = "Profile Picture"
     imageWidth = 120 # custom size
     imageHeight = 120 # custom size
 
@@ -37,21 +38,7 @@ theme = 'PaperMod'
     name = "Posts"
     url = "/posts/"
     weight = 20
-  [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
-    weight = 30
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 40
-  [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories/"
-    weight = 50
+  
 
 [markup]
   [markup.goldmark]

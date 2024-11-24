@@ -1,4 +1,14 @@
-# Non parametric density estimation
+---
+title: "Non parametric density estimation"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## What is parametric density estimation?
 In parametric density estimation, we assume that the data is generated from a known distribution, such as the normal distribution, and we estimate the parameters of the distribution using various methods like maximum likelihood estimation or risk minimization.

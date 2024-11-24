@@ -1,4 +1,14 @@
-# Adaboost
+---
+title: "Adaboost"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Recall
 Recall from our discussion on boosting we defined the ensemble model $H_T(x)$ as:

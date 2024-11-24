@@ -1,12 +1,25 @@
-# Expectation Maximization (EM) algorithm
-
+---
+title: "Expectation Maximization (EM) algorithm"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 Let the data be $D = \{t_i\}_{i=1}^N$ where $t_i \in \mathbb{R}^d$ are iid $p_t(t)$ data points.
 
 ## Latent variable models
 
 Let each data point $x_i$ be associated with a latent variable $z_i$ that is not observed. $z_i$ is a random variable that takes values in some finite set ${1, \ldots, K}$ and represents the membership of $x_i$ to one of $K$ clusters.
 
-Hence the data can be represented as $D = \{(t_i, z_i)\}_{i=1}^N$ where $t_i$ is the observed data and $z_i$ is the latent variable and $(t_i,z_i)$ are iid $p_{tz}$.
+Hence the data can be represented as 
+<div class="math-katex">
+$$D = \{(t_i, z_i)\}_{i=1}^N$$
+</div>
+ where $t_i$ is the observed data and $z_i$ is the latent variable and $(t_i,z_i)$ are iid $p_{tz}$.
 
 The marginal distribution of the observed data is given by:
 
@@ -24,32 +37,35 @@ $$
 \end{aligned}
 $$
 Let $q(z)$ be an arbitrary distribution over $z$.
+
+<div class="math-katex">
 $$
 \begin{aligned}
 \ell(\theta) &= \log \sum_z q(z) \frac{p_{tz}^\theta(t, z)}{q(z)} \\
 \end{aligned}
 $$
-
+</div>
+<div class="math-katex">
 $$
 \ell(\theta) = \log \mathbb{E}_{q(z)} \left[ \frac{p_{tz}^\theta(t, z)}{q(z)} \right]
 $$
-
+</div>
 By Jensen's inequality, we have:
-
+<div class="math-katex">
 $$
 \log \mathbb{E}_{q(z)} \left[ \frac{p_{tz}^\theta(t, z)}{q(z)} \right] \geq \mathbb{E}_{q(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]
 $$
-
+</div>
 Hence, we have:
-
+<div class="math-katex">
 $$
 \ell(\theta) \geq \mathbb{E}_{q(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]
 $$
-
+</div>
 $\ell(\theta)$ is the log-likelihood of the observed data it is also called the evidence.
-
-$\mathbb{E}_{q(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]$ is the lower bound of the log-likelihood and is also called the **evidence lower bound (ELBO)**.
-
+<div class="math-katex">
+$\mathbb{E}_{q(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]$ is the lower bound of the log-likelihood and is also called the evidence lower bound (ELBO).
+</div>
 Note that the ELBO is a function of $q(z)$ and $\theta$.
 
 ## Optimizing ELBO
@@ -58,26 +74,29 @@ Instead of maximizing the evidence, we maximize the evidence lower bound (ELBO).
 ## Making ELBO tight
 
 To make the ELBO tight, we consider the difference between the evidence and the ELBO:
-
+<div class="math-katex">
 $$
 \begin{aligned}
 \ell(\theta) - \text{ELBO}(q, \theta) &= \log p_t^\theta - \mathbb{E}_{q(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right] \\
 \end{aligned}
 $$
-
+</div>
+<div class="math-katex">
 $$
 \begin{aligned}
 \ell(\theta) - \text{ELBO}(q, \theta) &= \log p_t^\theta - \mathbb{E}_{q(z)} \left[ \log \frac{p_{z|t}^\theta(z|t)p_t^\theta(t)}{q(z)} \right] \\
 \end{aligned}
 $$
-
+</div>
+<div class="math-katex">
 $$
 \begin{aligned}
 \ell(\theta) - \text{ELBO}(q, \theta) &= \log p_t^\theta - \mathbb{E}_{q(z)} \left[ \log p_{z|t}^\theta(z|t) + \log p_t^\theta(t) - \log q(z) \right] \\
 \end{aligned}
 $$
+</div>
 
-
+<div class="math-katex">
 $$
 \begin{aligned}
 \ell(\theta) - \text{ELBO}(q, \theta) &= \log p_t^\theta - \mathbb{E}_{q(z)} \left[ \log p_{z|t}^\theta(z|t) \right] - \mathbb{E}_{q(z)} \left[ \log p_t^\theta(t) \right] + \mathbb{E}_{q(z)} \left[ \log q(z) \right] \\
@@ -88,7 +107,7 @@ $$
 \ell(\theta) - \text{ELBO}(q, \theta) &= KL(q(z) || p_{z|t}^\theta(z|t))
 \end{aligned}
 $$
-
+</div>
 
 The difference between the evidence and the ELBO is the Kullback-Leibler (KL) divergence between $q(z)$ and $p_{z|t}^\theta(z|t)$. To make the ELBO tight, we need to minimize this KL divergence.
 
@@ -114,9 +133,9 @@ Formally, the EM algorithm can be described as follows:
 2. Repeat until convergence:
    - E-step: Compute $q^{(t)}(z) = p_{z|t}^{\theta^{(t-1)}}(z|t)$
    - M-step: 
-     1. $\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]$
-     2. $\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log p_{tz}^\theta(t,z) \right] - \mathbb{E}_{q^{(t)}(z)} \left[ \log q(z) \right]$
-     3. $\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log p_{tz}^\theta(t,z) \right]$ as second term is constant wrt $\theta$
+     1. <div class="math-katex">$\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log \frac{p_{tz}^\theta(t, z)}{q(z)} \right]$</div>
+     2. <div class="math-katex">$\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log p_{tz}^\theta(t,z) \right] - \mathbb{E}_{q^{(t)}(z)} \left[ \log q(z) \right]$</div>
+     3. <div class="math-katex">$\theta^{(t)} = \arg\max_\theta \mathbb{E}_{q^{(t)}(z)} \left[ \log p_{tz}^\theta(t,z) \right]$ as second term is constant wrt $\theta$</div>
 
 The EM algorithm guarantees that the likelihood increases at each iteration and converges to a local maximum.
 
@@ -158,9 +177,11 @@ The EM algorithm for GMM proceeds as follows:
    $$
    \theta^{k+1} = \arg\max_\theta ELBO(q, \theta)
    $$
+   <div class="math-katex">
    $$
    \theta^{k+1} = \arg\max_\theta \mathbb{E}_{q(z)} \left[ \log p_{tz}^\theta(t,z) \right]
    $$
+   </div>
    $$
    = \arg\max_\theta \sum_{i=1}^N \sum_{k=1}^m q(z_i=k) \log \left( \alpha_k \mathcal{N}(t_i; \mu_k, \xi_k) \right)
    $$

@@ -1,4 +1,15 @@
-# Risk function (R)
+---
+title: "Risk function (R)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 
 Recall that the loss function $L(y_i, \hat{y_i})$ measures the error between the predicted label and the true label for a single data point.
 

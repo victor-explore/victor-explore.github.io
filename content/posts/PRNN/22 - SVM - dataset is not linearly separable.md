@@ -1,4 +1,14 @@
-# Support vector machine(SVM) when data is not linearly separable
+---
+title: "Support vector machine(SVM) when data is not linearly separable"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Dataset is not linearly separable
 Unlike the case when the dataset is linearly separable, we cannot find a hyperplane that separates the two classes of data points with zero training error.

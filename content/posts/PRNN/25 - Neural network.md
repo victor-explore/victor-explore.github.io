@@ -1,4 +1,14 @@
-# Neural network
+---
+title: "Neural network"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 A neural network is a computational model inspired by the structure and function of biological neural networks. Mathematically, it can be defined as a series of function compositions:
 
 $$ f(x) = f_L(f_{L-1}(...f_2(f_1(x)))) $$
@@ -54,7 +64,7 @@ This formulation allows the network to learn complex, non-linear mappings from i
     $$W = W_2W_1$$
     $$b = W_2b_1 + b_2$$
     
-    This is the equation of a linear model. Therefore, without non-linear activation functions, regardless of the number of layers, a neural network will always produce a linear transformation of the input.
+  - This is the equation of a linear model. Therefore, without non-linear activation functions, regardless of the number of layers, a neural network will always produce a linear transformation of the input.
 
   - Non-linear activation functions introduce non-linearity into the network, allowing it to learn and represent complex, non-linear relationships in the data.
 

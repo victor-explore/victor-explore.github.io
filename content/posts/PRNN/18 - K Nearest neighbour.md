@@ -1,5 +1,14 @@
-# K Nearest neighbour (KNN)
-
+---
+title: "K Nearest neighbour (KNN)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Basic idea
 
 Recall that we had derived the following equation for non-parametric density estimation:

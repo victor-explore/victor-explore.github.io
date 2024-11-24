@@ -1,4 +1,14 @@
-# Softmax regression also known multiclass regression
+---
+title: "Softmax regression also known multiclass regression"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Let the data be D = {($x_1$, $y_1$), ($x_2$, $y_2$), ..., ($x_n$, $y_n$)}
 where $y_i \in \{1, 2, ..., K\}$ is the multiclass label of the feature vector $x_i$, and $K$ is the number of classes.

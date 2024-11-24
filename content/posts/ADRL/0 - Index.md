@@ -1,5 +1,5 @@
 ---
-title: "Index for Advanced Deep Representation Learning"
+title: "Index for Deep Learning Topics"
 date:
 draft: false
 description:

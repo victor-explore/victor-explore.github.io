@@ -1,4 +1,14 @@
-# Learning problem
+---
+title: "Learning problem"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 We are given a dataset $D = \{(x_i, y_i)\}_{i=1}^n$ sampled from an unknown distribution $P$.
 

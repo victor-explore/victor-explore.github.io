@@ -1,8 +1,24 @@
-# K-means clustering also known as K-means algorithm or hard clustering
+---
+title: "K-means clustering"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
+K-means clustering also known as K-means algorithm or hard clustering
 
 ## Recall that in mixture model clustering
 
-Data was: $D = \{x_i\}_{i=1}^N$. We assumed latent variable $z_i$ is associated with each data point $x_i$. Hence data became $D = \{(x_i, z_i)\}_{i=1}^N$.
+Data was: 
+<div class="math-katex">
+$$D = \{x_i\}_{i=1}^N$$
+</div>
+ We assumed latent variable $z_i$ is associated with each data point $x_i$. Hence data became $D = \{(x_i, z_i)\}_{i=1}^N$.
 
 We assumed 
   

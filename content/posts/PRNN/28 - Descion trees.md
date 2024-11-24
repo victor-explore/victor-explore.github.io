@@ -1,5 +1,14 @@
-# Decision Trees
-
+---
+title: "Decision Trees"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## How to descion tree works
 
 - At each node, a question is asked about the data that splits the data into two or more non-overlapping subsets.
@@ -7,12 +16,10 @@ $$
 \text{Question: } x_j \leq \theta 
 $$
 then the data is split into two subsets, one where $x_j \leq \theta$ and one where $x_j > \theta$.
-
-
-![Decision Tree Diagram](Images\desciontrees.JPG)   
+   
 
 - The process is repeated till we reach leaf node, that classifies the datapoint to a region of the feature space.
-![alt text](Images/image.png)
+
 
 - We can do regression and classification of the test datapoint based on the trainig datapoints that lie in the region.
 

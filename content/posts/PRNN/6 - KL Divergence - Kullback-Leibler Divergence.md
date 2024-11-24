@@ -1,4 +1,14 @@
-# KL Divergence - Kullback-Leibler Divergence
+---
+title: "KL Divergence - Kullback-Leibler Divergence"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 KL divergence is a measure of how one probability distribution diverges from second, probability distribution.
 

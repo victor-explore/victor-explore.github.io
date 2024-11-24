@@ -1,9 +1,19 @@
-# Maximum aposteriori estimate(MAP  )
+---
+title: "Maximum aposteriori estimate(MAP)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 The Maximum A Posteriori (MAP) estimate is defined as:
-
+<div class="math-katex">
 $$\theta^*_{MAP} = \arg\max_{\theta} p(\theta|V) = \arg\max_{\theta} p(V|\theta) p(\theta)$$
-
+</div>
 where
 - $\theta^*_{MAP}$ is the MAP estimate of the parameter $\theta$
 - $p(\theta|V)$ is the posterior probability of the parameter $\theta$ given the observed data $V$

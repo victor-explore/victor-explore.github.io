@@ -1,4 +1,14 @@
-# Linear Discriminant Analysis(LDA) from bayesian perspective
+---
+title: Linear Discriminant Analysis(LDA)
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Let the data be $D = \{(x_i, y_i)\}_{i=1}^N$ where $x_i \in \mathbb{R}^d$ and $y_i \in \{1, 2\}$
 

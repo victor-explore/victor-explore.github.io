@@ -1,8 +1,16 @@
-# Backpropagation
+---
+title: "Backpropagation"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Notations
-![Backpropagation Diagram](Images/Backpropogation.JPG)
-
 - $L$: number of layers in the network.
 - $w_{jk}^l$: weight connecting $k^{th}$ neuron of $(l-1)^{th}$ layer to $j^{th}$ neuron of $l^{th}$ layer
 - $b_j^l$: bias of $j^{th}$ neuron in $l^{th}$ layer

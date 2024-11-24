@@ -1,5 +1,14 @@
-# Regularization
-
+---
+title: "Regularization"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 Regularization is a technique to increase model bias to reduce variance by constraining empirical risk minimization.
 
 regularized empirical risk minimization:

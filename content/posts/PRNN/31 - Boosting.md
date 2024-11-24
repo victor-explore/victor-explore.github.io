@@ -1,4 +1,14 @@
-# Boosting
+---
+title: "Boosting"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 In bagging, we train each model independently on a random subset of the data. In boosting, we train each model sequentially on the same data, with each subsequent model focusing on correcting the errors of combined previous model by increasing weights of misclassified datapoints
 

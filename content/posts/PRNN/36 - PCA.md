@@ -1,5 +1,14 @@
-# Principal Component Analysis (PCA)
-
+---
+title: "Principal Component Analysis (PCA)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 ## Problem Setup
 
 Data: Let the dataset be $X = \{x_i\}_{i=1}^N$, where each data point $x_i \in \mathbb{R}^d$.

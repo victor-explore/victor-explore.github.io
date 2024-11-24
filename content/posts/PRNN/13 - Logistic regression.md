@@ -1,4 +1,14 @@
-# Logistic regression also known as logit regression or binary classification
+---
+title: "Logistic regression also known as logit regression or binary classification"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Let the data be D = {($x_1$, $y_1$), ($x_2$, $y_2$), ..., ($x_n$, $y_n$)}
 where $y_i \in \{0, 1\}$ is the binary label of the feature vector $x_i$.

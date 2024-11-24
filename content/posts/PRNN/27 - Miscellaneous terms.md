@@ -1,4 +1,15 @@
-# Miscellaneous Machine Learning Terms
+---
+title: "Miscellaneous Machine Learning Terms"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 
 ## Epoch
 One complete pass of the entire training dataset for training the model.

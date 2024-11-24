@@ -1,4 +1,15 @@
-## XGBoost - Gradient boosted regression tree
+---
+title: "XGBoost - Gradient boosted regression tree"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 In XGBoost, the weak learners are decision trees.
 
 The algorithm builds these trees sequentially, with each new tree aiming to correct the errors of the combined previous trees.
@@ -16,15 +27,15 @@ The algorithm builds these trees sequentially, with each new tree aiming to corr
    where $\hat{y}_i = \frac{\partial R(H_{T-1}(x_i))}{\partial H_{T-1}(x_i)}$
 
 4. This formulation is equivalent to:
-
+<div class="math-katex">
    $$ h_T = \arg\min_{h \in H} \sum_{i=1}^n (h(x_i) - \hat{y}_i)^2 $$
-
+</div>
    which is the standard squared error regression problem with new labels $\hat{y}_i$.
 
 5. In practice, $\hat{y}_i$ is approximated as:
-
+<div class="math-katex">
    $$ \hat{y}_i = H_{T-1}(x_i) - y_i $$
-
+</div>
    where $y_i$ is the true label and $H_{T-1}(x_i)$ is the prediction of the ensemble up to the previous iteration. This approximation is derived from the first-order Taylor expansion of the gradient when using the squared error loss $L(y_i, H(x_i)) = \frac{1}{2}(y_i - H(x_i))^2$.
 
 ## Algorithm
@@ -36,9 +47,10 @@ The XGBoost algorithm can be summarized in the following steps:
 2. For t = 1 to T (number of trees):
    
    a. Update labels:
+   <div class="math-katex">
       $$ \hat{y}_i = H_{T-1}(x_i) - y_i $$
       for $i = 1, ..., n$
-
+   </div>
    b. Fit a regression tree to the updated labels, giving terminal regions $R_j^t$, $j = 1, ..., J_t$
 
    c. For each terminal region $R_j^t$, compute:

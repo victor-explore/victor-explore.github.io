@@ -1,4 +1,14 @@
-# SVM with kernel
+---
+title: "SVM with kernel"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Prerequisites - Kernel trick
 Kernel function $k(x, y) = \phi(x)^T \phi(y)$ where $\phi(x)$ is a feature mapping that maps the data points to a higher dimensional space without actually computing the feature mapping, i.e., $\phi(x)$.

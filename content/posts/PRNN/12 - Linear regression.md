@@ -1,4 +1,14 @@
-# Linear regression
+---
+title: "Linear regression"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Let the data be $(x_i, y_i)$ for $i = 1, 2, ..., n$ where $x_i \in \mathbb{R}^d$ and $y_i \in \mathbb{R}$.
 
@@ -103,23 +113,24 @@ y_n
 This is a column vector with $n$ rows, containing the scalar $y$ values of our data points.
 
 The solution $\beta^*$ is a $(d+1) \times 1$ vector:
-
+<div class="math-katex">
 $$\beta^* = \begin{bmatrix} 
 \beta_0^* \\
 \beta_1^* \\
 \vdots \\
 \beta_d^*
 \end{bmatrix}_{(d+1) \times 1}$$
+</div>
 
-To retrieve the individual $\beta_1^*$ values from $\beta^*$:
-
-1. $\beta_0^*$ is the first element of $\beta^*$, i.e., $\beta^*[0]$
-2. $\beta_1^*$ = $\begin{bmatrix} 
+To retrieve the individual betas:
+<div class="math-katex">
+$\beta_0^*$ is the first element of $\beta^*$, i.e., $\beta^*[0]$
+$\beta_1^*$ = $\begin{bmatrix} 
 \beta_1^* \\
 \vdots \\
 \beta_d^*
 \end{bmatrix}_{(d) \times 1}$
-
+</div>
 
 This solution is known as the Ordinary Least Squares (OLS) estimator. 
 

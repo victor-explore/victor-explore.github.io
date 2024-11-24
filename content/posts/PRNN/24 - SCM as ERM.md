@@ -1,4 +1,14 @@
-# Support measure machine (SCM) as Empirical Risk Minimization (ERM)
+---
+title: "Support measure machine (SCM) as Empirical Risk Minimization (ERM)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 Recall that in support measure machine (SCM), we were trying to maximize the margin between the two classes of data points.
 

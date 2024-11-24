@@ -1,4 +1,15 @@
-# Loss function (L)
+---
+title: "Loss function (L)"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+
 Let the data be D = {($x_1$, $y_1$), ($x_2$, $y_2$), ..., ($x_n$, $y_n$)}
 where $y_i$ is the label of the feature vector $x_i$.
 

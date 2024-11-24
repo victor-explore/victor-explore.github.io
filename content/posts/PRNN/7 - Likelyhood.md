@@ -1,4 +1,14 @@
-# Minimizing KL Divergence is Equivalent to Maxmimizing Likelihood
+---
+title: "Minimizing KL Divergence is Equivalent to Maxmimizing Likelihood"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 For a typical ML problem, all we have are samples from the true distribution $P(x)$ ie $data = \{(x_i)\}_{i=1}^N$ where $x_i \in \mathbb{R}^d$ are data points. We do not know the distribution $P(x)$ explicitly.
 

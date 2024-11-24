@@ -1,4 +1,15 @@
-# Parzen window estimate also known as the kernel density estimate
+---
+title: "Parzen window estimate"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
+Parzen window estimate is also known as the kernel density estimate
 
 ## Basic idea
 

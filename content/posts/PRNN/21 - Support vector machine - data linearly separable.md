@@ -1,4 +1,14 @@
-# Support vector machine(SVM) when data is linearly separable
+---
+title: "Support vector machine(SVM) when data is linearly separable"
+date:
+draft: false
+description:
+tags: []
+categories: []
+author:
+toc:
+weight: 1
+---
 
 ## Dataset is linearly separable
 Dataset $D = \{(x_i, y_i)\}_{i=1}^n$ where $x_i \in \mathbb{R}^d$ and $y_i \in \{-1, 1\}$ is said to be linearly separable if there exists a hyperplane that can separate the two classes of data points with zero training error.
