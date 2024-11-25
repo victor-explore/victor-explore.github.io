@@ -50,33 +50,45 @@ $$D_N = \{y_1, y_2, \ldots, y_t\}$$
 
   - This gives us a way to estimate the probability that a sample u comes from the real data distribution versus the noise distribution.
 
-- We define
+- We define:
   - $G(u;\theta) = \log p_\theta(u) - \log p_N(u)$ which is just the difference between the estimated log probabilities of the data distribution and the noise distribution.
-  - $p(c=1|u) = h_\theta(u) = \sigma(G(u;\theta)) = \frac{1}{1 + \exp(-G(u;\theta))}$ where $\sigma(s) = \frac{1}{1 + \exp(-s)}$ is the sigmoid function representing the probability that a sample u comes from the real data distribution versus the noise distribution.
+  - $p(c=1|u) = \sigma(G(u;\theta)) = \frac{1}{1 + \exp(-G(u;\theta))}$ where $\sigma(s) = \frac{1}{1 + \exp(-s)}$ is the sigmoid function representing the probability that a sample u comes from the real data distribution versus the noise distribution.
 
 - The likelihood function for the binary classification problem is:
   $$L(\theta) = \sum_{t=1}^{2T} c_t \log p(c_t=1|u_t;\theta) + (1-c_t)\log p(c_t=0|u_t;\theta)$$
   
   Which can be rewritten as:
-  $$L(\theta) = \sum_{t=1}^{T} \log h_\theta(x_t) + \sum_{t=T}^{2T} \log(1-h_\theta(y_t))$$
+  $$L(\theta) = \sum_{t=1}^{T} \log \sigma(G(x_t;\theta)) + \sum_{t=T}^{2T} \log(1-\sigma(G(y_t;\theta)))$$
 
   where:
-  - $h_\theta(u) = p(c=1|u)$ is the classifier's prediction
   - The first sum is over real data samples
   - The second sum is over noise samples
   - $\theta$ are the parameters we want to learn
   - $L(\theta)$ is also known as NCE estimator
 
 - From law of large numbers, we can write the expected value of the likelihood:
-  <div class="math-katex">$$J(\theta) = \frac{1}{2} \mathbb{E}_{p_{DN}} [\log h_\theta(x) + \log(1-h_\theta(y))]$$</div>
+  <div class="math-katex">$$J(\theta) = \frac{1}{2} \mathbb{E}_{p_{DN}} [\log \sigma(G(x;\theta)) + \log(1-\sigma(G(y;\theta)))]$$</div>
 
   where:
   - The expectation is taken over the joint distribution of data and noise samples
   - $x$ follows the data distribution $p_D$
   - $y$ follows the noise distribution $p_N$
 
-- After some algebraic manipulation, we can write:
-  $$J(\theta) = \frac{1}{2} \mathbb{E} [\log r(log(p_\theta(x)) - log(p_N(x))) + \log(1-r(log(p_\theta(y)) - log(p_N(y)))]$$
+
+   Starting from the previous equation:
+   <div class="math-katex">
+     $$J(\theta) = \frac{1}{2} \mathbb{E}_{p_{DN}} [\log \sigma(G(x;\theta)) + \log(1-\sigma(G(y;\theta)))]$$
+    </div>
+   Recall that $G(u;\theta) = \log p_\theta(u) - \log p_N(u)$
+
+   For the first term:
+     $$\log \sigma(G(x;\theta)) = \log \sigma(\log p_\theta(x) - \log p_N(x))$$
+
+   For the second term:
+     $$\log(1-\sigma(G(y;\theta))) = \log(1-\sigma(\log p_\theta(y) - \log p_N(y)))$$
+
+   Substituting back:
+     $$J(\theta) = \frac{1}{2} \mathbb{E} [\log \sigma(\log p_\theta(x) - \log p_N(x)) + \log(1-\sigma(\log p_\theta(y) - \log p_N(y)))]$$
 
   where:
   - $r(\cdot)$ is the sigmoid function
