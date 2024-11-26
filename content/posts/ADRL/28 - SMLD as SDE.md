@@ -12,7 +12,9 @@ weight: 1
 
 ## Step 1 of big picture  (Stochastic forward process to continuous SDE)
 We know SMLD (Score Matching with Langevin Dynamics) forward process is:
-   $$x_i = x_{i-1} + \sqrt{\sigma_{t+1}^2 - \sigma_t^2}z_{i-1}, \quad z_{i-1} \sim \mathcal{N}(0,I)$$
+   $$x_i = x_{i-1} + \sqrt{\sigma_{i}^2 - \sigma_{i-1}^2}z_{i-1}, \quad z_{i-1} \sim \mathcal{N}(0,I)$$
+
+   where $\sigma_i$ is the noise level at step $i$, increasing with $i$.
 
 Let's convert the discrete SMLD process to a continuous SDE:
 
@@ -28,8 +30,11 @@ Let's convert the discrete SMLD process to a continuous SDE:
 3. Rearranging to get the change in x:
    $$x(t + \Delta t) - x(t) = \sqrt{\sigma(t + \Delta t)^2 - \sigma(t)^2}z_t$$
 
-4. Note that for small $\Delta t$:
+4. We use a first-order Taylor expansion to approximate the change in $\sigma(t)^2$:
+   $$\sigma(t + \Delta t)^2 \approx \sigma(t)^2 + \frac{d(\sigma(t)^2)}{dt}\Delta t$$
+   Subtracting $\sigma(t)^2$ from both sides gives:
    $$\sigma(t + \Delta t)^2 - \sigma(t)^2 \approx \frac{d(\sigma(t)^2)}{dt}\Delta t$$
+   This linearizes the change in $\sigma(t)^2$ over the small interval $\Delta t$.
 
 5. Also, $z_t\sqrt{\Delta t} = dB_t$ for Brownian motion increments
 

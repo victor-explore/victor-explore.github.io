@@ -17,8 +17,28 @@ Now let's see how DDPMs can be viewed as discretizations of SDEs.
 The forward process in DDPMs is given by:
 $$x_{i+1} = \sqrt{1-\beta_{i+1}}x_i + \sqrt{\beta_{i+1}}\epsilon_i \quad \text{where} \quad \epsilon_i \sim \mathcal{N}(0,I)$$
 
-This discrete process corresponds to a continuous-time SDE of the form(*derivation done in class*):
-$$dx = -\frac{\beta(t)}{2}x dt + \sqrt{\beta(t)}dB_t$$
+Let's derive the corresponding continuous-time SDE:
+
+1. First, rewrite the discrete equation:
+   $$x_{i+1} - x_i = (\sqrt{1-\beta_{i+1}} - 1)x_i + \sqrt{\beta_{i+1}}\epsilon_i$$
+
+2. As the time step $\Delta t \to 0$, we can approximate:
+   $$\sqrt{1-\beta_{i+1}} \approx 1 - \frac{\beta_{i+1}}{2}$$
+   This approximation comes from the Taylor series expansion of $\sqrt{1-x}$ around $x=0$:
+   $$\sqrt{1-x} = 1 - \frac{1}{2}x - \frac{1}{8}x^2 - \frac{1}{16}x^3 + \cdots$$
+   We keep only the first two terms, assuming $\beta_{i+1}$ is small.
+
+3. Substituting this approximation and introducing $\Delta t$:
+   $$x_{i+1} - x_i \approx -\frac{\beta_{i+1}}{2}x_i\Delta t + \sqrt{\beta_{i+1}}\epsilon_i\sqrt{\Delta t}$$
+   Here, $\Delta t$ is introduced to represent the time step between $i$ and $i+1$.
+
+4. In the continuous limit, as $\Delta t \to 0$:
+   - $x_{i+1} - x_i \to dx$
+   - $\beta_{i+1} \to \beta(t)$
+   - $\epsilon_i\sqrt{\Delta t} \to dB_t$ (where $B_t$ is Brownian motion)
+
+5. Therefore, the continuous-time SDE is:
+   $$dx = -\frac{\beta(t)}{2}x dt + \sqrt{\beta(t)}dB_t$$
 
 where:
 - $\beta(t)$ is a continuous-time version of the discrete noise schedule $\beta_i$, with $\beta_i \in (0,1)$ and $\beta_T \approx 1$ because we want $x_T$ to be pure noise

@@ -67,3 +67,6 @@ weight: 1
 
 ## Misc
 - [Distillation]({{< ref "/posts/ADRL/37 - Distillation.md" >}})
+
+## Cheatsheet
+- [Cheatsheet]({{< relref "/posts/ADRL/Cheatsheet.md" >}})
