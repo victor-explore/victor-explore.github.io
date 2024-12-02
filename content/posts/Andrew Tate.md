@@ -18,3 +18,9 @@ These are some things that I have learned from watching Andrew Tate's videos:
 ## Freedom
 
 - **How to maintain illusion of freedom**: By putting freaks to the front. This person chopped his dick off, see we are free!(You are free to hurt yourself). But do not be fooled you are not free to say anything against the power, anything important.
+
+## Anxiety
+
+- You have anxiety because you should be anxious, Why is a mouse anxious ? Same for you! The large bear does not get anxious. A mouse think a noise (anxious) it might kill me! Bear thinks I might want to kill it! Its a different vibe.
+- Anxiety is not a disorder - it is a natural conclusion of your ineptitude, its your soul giving you feedback. Anxiety is cured by strength.
+- Dying ain't so bad untill unless you die for a good reason. Dying is not the worst thing that can heppen, living without a purpose is the worst thing that can happen.
