@@ -2,13 +2,12 @@ Instructions:
 - Whatever you write has to be mathematically precise along with mathematical notations that are consistent
 - Explain the concepts in a way that build intuition in the student why it is being done and how it fits in the bigger picture
 - The concepts should flow logically
-- Be concise and to the point, try to explain the concepts in minimal words
-- Usually write mathematical notations in a separate line
+- Write mathematical notations in a separate line
 - Use $ for mathematical notations
 - Use $$ for mathematical equations
 - Use bullet points etc to make the content more readable
-- use headings and subheadings etc to make the content more readable
-- Do not keep repeating the same concepts in the same way
-- Do explain the equations like $$
-     \underbrace{\mu_k^*(x_k)}_{\substack{\text{Optimal policy} \\ \text{at stage } k \text{ for state } x_k}} = \arg\min_{a_k \in A(x_k)} \underbrace{E_{x_{k+1}} \left[ \underbrace{g_k(x_k,a_k,x_{k+1})}_{\substack{\text{Immediate stage cost} \\ \text{at stage } k}} + \underbrace{J_{k+1}(x_{k+1})}_{\substack{\text{Optimal cost-to-go} \\ \text{from stage } k+1}} \biggm\vert x_k, a_k \right]}_{\substack{\text{Expected total cost} \\ \text{from stage } k \text{ onwards}}}
-     $$
+- Use headings and subheadings etc to make the content more readable
+- Do explain the equations in detail like this. First explain the inner terms and then build up to the final equation. For example, for the equation below, first inner terms like underbrace{\mu_k^*(x_k)}underbrace{\mu_k^*(x_k)} are explained using the braces under the terms. The the combined terms are explained using the underbraces under the combined terms.
+ $$
+\underbrace{\mu_k^*(x_k)}_{\substack{\text{Optimal policy} \\ \text{at stage } k \text{ for state } x_k}} = \arg\min_{a_k \in A(x_k)} \underbrace{E_{x_{k+1}} \left[ \underbrace{g_k(x_k,a_k,x_{k+1})}_{\substack{\text{Immediate stage cost} \\ \text{at stage } k}} + \underbrace{J_{k+1}(x_{k+1})}_{\substack{\text{Optimal cost-to-go} \\ \text{from stage } k+1}} \biggm\vert x_k, a_k \right]}_{\substack{\text{Expected total cost} \\ \text{from stage } k \text{ onwards}}}
+$$
