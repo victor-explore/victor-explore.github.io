@@ -5,13 +5,23 @@ theme = 'PaperMod'
 
 [params]
   math = true
+  ShowPageNavigation = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  ShowPostNavLinks = true
+  enableEmoji = true
+  showtoc = true
+  hideMeta = false
+  mainSections = ["posts"]
+  enableDropdownMenu = true
 
   [params.profileMode]
     enabled = true
     title = "Victor"
     subtitle = "I talk about AI"
     subtitle2 = "And share insights about technology, society, and personal growth"
-    imageUrl = "https://pbs.twimg.com/profile_images/1794626761671770112/UhwIrobb_400x400.png"
+    imageUrl = "/images/profile.png"
     imageTitle = "Profile Picture"
     imageWidth = 120 # custom size
     imageHeight = 120 # custom size
@@ -27,18 +37,40 @@ theme = 'PaperMod'
     facebook_admin = "" # If you have a Facebook admin ID
     twitter = "victor_explore" # Your Twitter handle without @
 
+  [params.assets]
+    favicon = "/images/profile.png"
+    favicon16x16 = "/images/profile.png"
+    favicon32x32 = "/images/profile.png"
+    apple_touch_icon = "/images/profile.png"
+
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 10
+    identifier = "ai-roadmap"
+    name = "🗺️ AI Roadmap"
+    url = "/posts/AI Roadmap/"
+    weight = 20
+  [[menu.main]]
+    identifier = "free-resources"
+    name = "📚 Free Resources"
+    url = "/posts/Free Resources/"
+    weight = 23
+  [[menu.main]]
+    identifier = "discord-community"
+    name = "💬 Discord Community"
+    url = "https://discord.com/invite/QHAbprqQme"
+    weight = 25
+    params = { newTab = true }
   [[menu.main]]
     identifier = "posts"
-    name = "Posts"
+    name = "📝 Posts"
     url = "/posts/"
-    weight = 20
-  
+    weight = 30
+  [[menu.main]]
+    identifier = "support-me"
+    name = "☕ Support Me"
+    url = "https://ko-fi.com/victor_explore"
+    weight = 35
+    params = { newTab = true }
 
 [markup]
   [markup.goldmark]
