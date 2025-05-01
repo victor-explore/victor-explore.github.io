@@ -13,6 +13,7 @@ weight: 1
 # Given that
 - Seems that AI is improving at a rapid pace
 
+
 # Following jobs will be lost
 - Text to video models etc will replace Actors, producers, writers etc.
 - Text to speech models will replace Singers
