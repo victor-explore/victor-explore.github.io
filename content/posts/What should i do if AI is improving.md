@@ -1,6 +1,6 @@
 ---
 title: "What should i do if AI is improving"
-date:
+date: 2025-02-01
 draft: false
 description:
 tags: []

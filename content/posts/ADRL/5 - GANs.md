@@ -1,6 +1,6 @@
 ---
 title: "Generative Adversarial Networks (GANs)"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

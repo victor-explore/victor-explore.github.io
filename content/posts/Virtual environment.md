@@ -1,6 +1,6 @@
 ---
 title: "Why we need a virtual environment"
-date:
+date: 2025-02-01 
 draft: false
 description:
 tags: []

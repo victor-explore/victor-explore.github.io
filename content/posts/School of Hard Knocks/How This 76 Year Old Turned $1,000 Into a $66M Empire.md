@@ -1,6 +1,6 @@
 ---
 title: "How This 76 Year Old Turned thousands into millions"
-date:
+date: 2025-02-01
 draft: false
 description:
 tags: []

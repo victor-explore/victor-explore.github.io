@@ -1,6 +1,6 @@
 ---
 title: "Free Resources"
-date:
+date: 2025-02-01
 draft: false
 description:
 tags: []

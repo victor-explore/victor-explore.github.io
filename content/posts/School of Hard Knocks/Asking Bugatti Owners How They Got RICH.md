@@ -1,6 +1,6 @@
 ---
 title: "Asking Bugatti Owners How They Got RICH"
-date:
+date: 2025-02-01
 draft: false
 description:
 tags: []

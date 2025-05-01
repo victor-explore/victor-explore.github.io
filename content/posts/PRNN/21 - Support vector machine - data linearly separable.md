@@ -1,6 +1,6 @@
 ---
 title: "Support vector machine(SVM) when data is linearly separable"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

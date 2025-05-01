@@ -1,6 +1,6 @@
 ---
 title: "Score matching part 2"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

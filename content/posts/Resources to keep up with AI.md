@@ -1,6 +1,6 @@
 ---
 title: "Resources to keep up with AI"
-date: 2023-12-02
+date: 2025-02-01
 draft: false
 description:
 tags: []

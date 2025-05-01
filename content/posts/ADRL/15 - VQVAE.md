@@ -1,6 +1,6 @@
 ---
 title: "Vector Quantized Variational Autoencoders (VQ-VAEs)"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

@@ -1,6 +1,6 @@
 ---
 title: "Principal Component Analysis (PCA)"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

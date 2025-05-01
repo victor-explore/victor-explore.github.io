@@ -1,6 +1,6 @@
 ---
 title: "Precursor: Stochastic Differential Equations (SDEs)"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

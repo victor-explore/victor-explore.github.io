@@ -1,6 +1,6 @@
 ---
 title: "State space models & Mamba"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

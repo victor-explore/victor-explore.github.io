@@ -1,6 +1,6 @@
 ---
 title: "SMLD as SDE"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

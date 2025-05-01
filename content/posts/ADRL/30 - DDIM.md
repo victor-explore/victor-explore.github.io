@@ -1,6 +1,6 @@
 ---
 title: "DDIM (Denoising Diffusion Implicit Models)"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []

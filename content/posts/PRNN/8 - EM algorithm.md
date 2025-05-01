@@ -1,6 +1,6 @@
 ---
 title: "Expectation Maximization (EM) algorithm"
-date:
+date: 2025-01-01
 draft: false
 description:
 tags: []
