@@ -45,15 +45,11 @@ theme = 'PaperMod'
 
 [menu]
   [[menu.main]]
-    identifier = "ai-roadmap"
-    name = "🗺️ AI Roadmap"
-    url = "/posts/AI Roadmap/"
+    identifier = "ai-agent-builder-community"
+    name = "🤖 AI Agent Builder Community"
+    url = "https://x.com/i/communities/1918880733730603290"
     weight = 20
-  [[menu.main]]
-    identifier = "free-resources"
-    name = "📚 Free Resources"
-    url = "/posts/Free Resources/"
-    weight = 23
+    params = { newTab = true }
   [[menu.main]]
     identifier = "discord-community"
     name = "💬 Discord Community"
