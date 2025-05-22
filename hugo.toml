@@ -45,6 +45,12 @@ theme = 'PaperMod'
 
 [menu]
   [[menu.main]]
+    identifier = "buy-ai-agents"
+    name = "🛒 Buy AI Agents"
+    url = "https://shop.victorexplore.com/"
+    weight = 15
+    params = { newTab = true }
+  [[menu.main]]
     identifier = "ai-agent-builder-community"
     name = "🤖 AI Agent Builder Community"
     url = "https://x.com/i/communities/1918880733730603290"
@@ -61,12 +67,6 @@ theme = 'PaperMod'
     name = "📝 Posts"
     url = "/posts/"
     weight = 30
-  [[menu.main]]
-    identifier = "support-me"
-    name = "☕ Support Me"
-    url = "https://ko-fi.com/victor_explore"
-    weight = 35
-    params = { newTab = true }
 
 [markup]
   [markup.goldmark]
