@@ -2,9 +2,10 @@
 title: "How to setup n8n cloud"
 date: 2025-05-27
 draft: false
-description:
-tags: []
-categories: []
+description: "A step-by-step guide to setting up n8n cloud platform for workflow automation"
+url: "/posts/n8n/setup-n8n-cloud-guide/"
+tags: ["n8n", "automation", "workflow", "cloud", "tutorial"]
+categories: ["automation", "tutorials"]
 author:
 toc:
 weight: 1
@@ -36,22 +37,3 @@ Once you have submitted the signup form, you will be redirected to the n8n cloud
 <div style="text-align: center;">
     <img src="/images/posts/n8n/3.png" alt="n8n cloud dashboard" style="display: block; margin: 0 auto;" />
 </div>
-
-### Create a new workflow
-
-In the dashboard, click on the "Create Workflow" button to create a new workflow.
-
-<div style="text-align: center;">
-    <img src="/images/posts/n8n/4.png" alt="n8n cloud create workflow" style="display: block; margin: 0 auto;" />
-</div>
-
-### Load an existing workflow
- 
-In the dashboard, click on the "..." button then select "Import from File" to load an existing workflow from a JSON file.
-
-<div style="text-align: center;">
-    <img src="/images/posts/n8n/6.png" alt="n8n cloud import workflow" style="display: block; margin: 0 auto;" />
-</div>
-
-
-Once you have loaded the workflow, you can start using it.
