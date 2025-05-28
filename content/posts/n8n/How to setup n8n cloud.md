@@ -2,10 +2,9 @@
 title: "How to setup n8n cloud"
 date: 2025-05-27
 draft: false
-description: "A step-by-step guide to setting up n8n cloud platform for workflow automation"
-url: "/posts/n8n/setup-n8n-cloud-guide/"
-tags: ["n8n", "automation", "workflow", "cloud", "tutorial"]
-categories: ["automation", "tutorials"]
+description:
+tags: []
+categories: []
 author:
 toc:
 weight: 1
@@ -55,4 +54,4 @@ In the dashboard, click on the "..." button then select "Import from File" to lo
 </div>
 
 
-Once you have loaded the workflow, you can start using it. 
+Once you have loaded the workflow, you can start using it.
