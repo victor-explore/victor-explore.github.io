@@ -39,5 +39,4 @@ Click on the "..." button and select "Import from File" from the dropdown menu.
     <img src="/images/posts/n8n/6.png" alt="n8n cloud website" style="display: block; margin: 0 auto;" />
 </div>
 
-
-This will load the workflow.
+Now browse to the file you want to load and click on the "Open" button. This will load the workflow.
