@@ -11,13 +11,13 @@ toc:
 weight: 1
 ---
 
-### Open the n8n dashboard
+## Open the n8n dashboard
 
 <div style="text-align: center;">
     <img src="/images/posts/n8n/3.png" alt="n8n cloud website" style="display: block; margin: 0 auto;" />
 </div>
 
-### Open new workflow
+## Open new workflow
 
 Click on the "Create Workflow" button.
 
@@ -31,7 +31,7 @@ This will open the new workflow page.
     <img src="/images/posts/n8n/5.png" alt="n8n cloud website" style="display: block; margin: 0 auto;" />
 </div>
 
-### Load workflow
+## Load workflow
 
 Click on the "..." button and select "Import from File" from the dropdown menu.
 
