@@ -12,6 +12,6 @@ weight: 1
 ---
 Follow the instructions in this video to connect Supabase to n8n
 
-{{< youtube k16gpG0EsIE >}}
+{{< youtube cWdKBQSSaT8 >}}
 
 
