@@ -117,6 +117,8 @@ Where:
 
 **Intuition**: These probabilities represent our **beliefs** about how likely different scenarios are to occur.
 
+**Evolutionary Bias Warning**: Humans systematically overestimate probabilities of negative outcomes due to evolutionary survival mechanisms - our ancestors who feared threats lived longer than optimists who ignored dangers.
+
 **Note on Information Gathering**: Most relevant situational information is readily available through basic observation and research. Excessive attempts to gather more precise probabilities (like trying to gauge your boss's emotions or mood) often produces noise rather than signal and can become anxiety-inducing without meaningfully improving decision quality.
 
 #### Step 2: Define Utility Function
