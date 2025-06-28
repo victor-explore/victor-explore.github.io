@@ -1,6 +1,6 @@
 ---
 title: "Decision making framework using probability theory"
-date: 2025-06-27
+date: 2025-06-28
 draft: false
 description:
 tags: []
