@@ -1,6 +1,6 @@
 ---
-title: "Andrew Tate"
-date: 2025-02-01
+title: "Andrew Tate on Big Bedrooms"
+date: 2025-07-22
 draft: false
 description:
 tags: []
