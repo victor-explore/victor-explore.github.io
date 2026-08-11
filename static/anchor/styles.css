@@ -173,20 +173,12 @@ input {
 }
 
 .wordmark {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--s2);
   font-weight: 700;
   font-size: var(--t-20);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.wordmark svg {
-  width: 24px;
-  height: 24px;
-  color: var(--lime);
-  flex: none;
 }
 
 /* ----------------------------------------------------------------- hero */
