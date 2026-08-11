@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anchor — talk to your coach, watch the plan change</title>
+    <meta
+      name="description"
+      content="Anchor builds your 90-day plan, then rewrites it when you ask. Coming soon on Android."
+    />
+    <meta name="theme-color" content="#212530" />
+
+    <meta property="og:title" content="Anchor — talk to your coach, watch the plan change" />
+    <meta
+      property="og:description"
+      content="Anchor builds your 90-day plan, then rewrites it when you ask. Coming soon on Android."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.victorexplore.com/anchor/" />
+    <link rel="canonical" href="https://www.victorexplore.com/anchor/" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b1fa12' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="page">
+      <header class="site-header">
+        <div class="shell">
+          <div class="wordmark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="5" r="3" />
+              <line x1="12" y1="22" x2="12" y2="8" />
+              <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
+            </svg>
+            Anchor
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="hero">
+          <div class="shell">
+            <div class="hero-copy">
+              <p class="eyebrow reveal d1"><span class="dot"></span> Coming soon &middot; Android</p>
+
+              <h1 class="reveal d2">
+                <span class="line">Talk to your coach.</span>
+                <span class="line">Watch <span class="accent">the plan change.</span></span>
+              </h1>
+
+              <p class="subhead reveal d3">
+                Anchor builds your 90-day plan, then rewrites it when you ask. Sore
+                shoulder, or no gym until Friday? Say it in plain words and tomorrow&rsquo;s
+                plan is different.
+              </p>
+
+              <form class="signup reveal d4" id="signup" novalidate>
+                <div class="field-row">
+                  <div class="field">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      inputmode="email"
+                      autocomplete="email"
+                      placeholder="you@example.com"
+                      aria-label="Email address"
+                      aria-describedby="form-note"
+                    />
+                  </div>
+                  <button class="btn" type="submit" id="submit">
+                    <span id="submit-label">Tell me when it&rsquo;s live</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14" />
+                      <path d="m13 6 6 6-6 6" />
+                    </svg>
+                  </button>
+                </div>
+                <p class="form-note" id="form-note" role="status">
+                  One email the day it launches. Nothing else, ever.
+                </p>
+                <p class="form-legal">
+                  Your address is stored by Anchor and never shared.
+                  <a href="privacy/">How we handle it</a>.
+                </p>
+              </form>
+            </div>
+
+            <!-- Recreation of the Anchor chat screen. -->
+            <div class="phone-stage reveal d5">
+              <div class="phone" role="img" aria-label="The Anchor chat screen. The coach asks how the body is feeling. The user says their shoulder is wrecked and overhead press is out; the coach replies that it has swapped it for landmine press in every session from today. The user asks to drop the cold shower habit; the coach removes it from tomorrow and keeps the steps and sleep habits.">
+                <div class="screen" aria-hidden="true">
+                  <div class="notch"></div>
+
+                  <div class="status-bar">
+                    <span>9:41</span>
+                    <span class="status-icons">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 20h3v-6H2zm5.5 0h3V9h-3zM13 20h3V4h-3zm5.5 0h3v-9h-3z" /></svg>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 19.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M4.6 12.3l1.8 1.8a8 8 0 0 1 11.2 0l1.8-1.8a10.5 10.5 0 0 0-14.8 0M1 8.7l1.8 1.8a13 13 0 0 1 18.4 0L23 8.7a15.6 15.6 0 0 0-22 0" /></svg>
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 8h13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2m16.5 3h1v2h-1z" /></svg>
+                    </span>
+                  </div>
+
+                  <div class="chat-header">
+                    <span class="avatar">
+                      <img src="assets/coach-rueben.jpg" alt="" width="44" height="44" />
+                      <span class="badge"></span>
+                    </span>
+                    <span class="who">
+                      <strong>Vinci</strong>
+                      <span>Active Now</span>
+                    </span>
+                    <span class="actions">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                        <path d="M3 3v5h5" />
+                        <path d="M12 7v5l3 2" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="chat-log">
+                    <div class="msg from-coach">
+                      <p class="text">Morning. How&rsquo;s the body feeling before Saturday?</p>
+                      <span class="stamp">07:41</span>
+                    </div>
+
+                    <div class="msg from-user">
+                      <p class="text">Shoulder&rsquo;s wrecked. Overhead press is a no.</p>
+                      <span class="stamp">07:52</span>
+                    </div>
+
+                    <div class="msg from-coach">
+                      <p class="text">
+                        Sorted. Swapped it for landmine press in every session from today.
+                        Same push pattern, a lot kinder on the joint.
+                      </p>
+                      <span class="stamp">07:52</span>
+                    </div>
+
+                    <div class="msg from-user">
+                      <p class="text">Also drop the cold shower habit. Not happening.</p>
+                      <span class="stamp">07:53</span>
+                    </div>
+
+                    <div class="msg from-coach">
+                      <p class="text">
+                        Gone from tomorrow. Keeping your steps and sleep though, those two
+                        are doing the heavy lifting right now.
+                      </p>
+                      <span class="stamp">07:53</span>
+                    </div>
+                  </div>
+
+                  <div class="chat-input">
+                    <span class="box">Message your coach...</span>
+                    <span class="send">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2 11 13" />
+                        <path d="M22 2 15 22l-4-9-9-4Z" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <nav class="tabbar">
+                    <span class="tab">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9.5 12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                        <path d="M9 22v-9h6v9" />
+                      </svg>
+                      Home
+                    </span>
+                    <span class="tab">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="6" height="6" rx="1.5" />
+                        <path d="m3 16.5 2 2 4-4" />
+                        <path d="M13 6h8M13 12h8M13 18h8" />
+                      </svg>
+                      To Do
+                    </span>
+                    <span class="tab active">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                      </svg>
+                      Chat
+                    </span>
+                    <span class="tab">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M19 21a7 7 0 0 0-14 0" />
+                      </svg>
+                      Profile
+                    </span>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proofs-band">
+          <ol class="shell proofs reveal d6">
+            <li class="proof">
+              <h2>It builds you a real plan</h2>
+              <p>
+                Setup asks about your goals, your barriers and how much time you&rsquo;ve
+                really got. You get 90 days of training and daily habits, staged so
+                you&rsquo;re not doing everything at once.
+              </p>
+            </li>
+
+            <li class="proof">
+              <h2>You tell it what happened</h2>
+              <p>
+                There&rsquo;s no form to fill in and no settings screen to hunt through.
+                Tell the coach your shoulder&rsquo;s done or the week fell apart, the way
+                you&rsquo;d tell a person.
+              </p>
+            </li>
+
+            <li class="proof">
+              <h2>The plan actually changes</h2>
+              <p>
+                It swaps that exercise across every future session and reworks the habits
+                underneath. Open tomorrow and the change is already there.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="shell">
+          <span>&copy; 2026 Anchor</span>
+          <span><a href="privacy/">Privacy policy</a></span>
+          <span>Coaching methodology by Rueben Hewitt</span>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const form = document.getElementById('signup');
+      const input = document.getElementById('email');
+      const note = document.getElementById('form-note');
+      const submit = document.getElementById('submit');
+      const submitLabel = document.getElementById('submit-label');
+
+      const DEFAULT_NOTE = 'One email the day it launches. Nothing else, ever.';
+      const SUBMIT_LABEL = submitLabel.textContent;
+      const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      // Kit's own embed form action. It takes a form-encoded POST and needs no
+      // API key, so nothing secret lives in this page.
+      const KIT_ENDPOINT = 'https://app.kit.com/forms/9786076/subscriptions';
+
+      function setNote(text, tone) {
+        note.textContent = text;
+        note.classList.toggle('is-error', tone === 'error');
+        note.classList.toggle('is-notice', tone === 'notice');
+        note.classList.toggle('is-success', tone === 'success');
+      }
+
+      function setBusy(busy) {
+        form.setAttribute('aria-busy', String(busy));
+        submitLabel.textContent = busy ? 'Adding you\u2026' : SUBMIT_LABEL;
+        if (busy) {
+          submit.setAttribute('aria-disabled', 'true');
+        } else {
+          submit.removeAttribute('aria-disabled');
+        }
+      }
+
+      input.addEventListener('input', () => {
+        if (input.getAttribute('aria-invalid') === 'true') {
+          input.removeAttribute('aria-invalid');
+          setNote(DEFAULT_NOTE, null);
+        }
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        if (submit.getAttribute('aria-disabled') === 'true') return;
+
+        const email = input.value.trim();
+
+        if (!email) {
+          input.setAttribute('aria-invalid', 'true');
+          setNote('Pop your email in first and we’ll do the rest.', 'error');
+          return;
+        }
+
+        if (!EMAIL.test(email)) {
+          input.setAttribute('aria-invalid', 'true');
+          setNote('That does not look like an email address.', 'error');
+          return;
+        }
+
+        input.removeAttribute('aria-invalid');
+        setBusy(true);
+        setNote('Adding you to the list\u2026', null);
+
+        try {
+          const response = await fetch(KIT_ENDPOINT, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: new URLSearchParams({ email_address: email }),
+          });
+          const result = await response.json();
+
+          if (result.status === 'success') {
+            // Stays disabled: the address is in, so a second press is pointless.
+            form.setAttribute('aria-busy', 'false');
+            submit.setAttribute('aria-disabled', 'true');
+            submitLabel.textContent = 'You\u2019re on the list';
+            input.readOnly = true;
+            setNote('Nice one. We’ll email you the day Anchor goes live.', 'success');
+            return;
+          }
+
+          // Kit holds submissions it suspects are bots until a challenge is passed.
+          if (result.status === 'quarantined' && result.url) {
+            setBusy(false);
+            note.className = 'form-note is-notice';
+            note.textContent = 'One more step to prove you\u2019re human: ';
+            const link = document.createElement('a');
+            link.href = result.url;
+            link.rel = 'noopener';
+            link.target = '_blank';
+            link.textContent = 'finish confirming';
+            note.append(link, '.');
+            return;
+          }
+
+          setBusy(false);
+          input.setAttribute('aria-invalid', 'true');
+          setNote(
+            result.errors?.messages?.join(' ') ||
+              'That didn’t go through. Give it another try in a moment.',
+            'error'
+          );
+        } catch {
+          setBusy(false);
+          setNote(
+            'Couldn’t reach the server. Check your connection and try again.',
+            'error'
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
