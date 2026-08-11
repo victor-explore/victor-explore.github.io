@@ -4,6 +4,8 @@ title = 'Victor'
 theme = 'PaperMod'
 
 [params]
+  # Hugo removed site.Author; PaperMod's rss.xml falls back to it unless this is set.
+  author = "Victor"
   math = true
   ShowPageNavigation = true
   ShowBreadCrumbs = false
