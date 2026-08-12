@@ -270,9 +270,15 @@ h1 .accent {
   margin-bottom: var(--s3);
 }
 
-.platform-prompt {
+.platform-prompt,
+.field-prompt {
   font-size: var(--t-14);
   color: var(--text-secondary);
+}
+
+.field-prompt {
+  display: block;
+  margin-bottom: var(--s2);
 }
 
 .platform {
