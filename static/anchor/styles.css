@@ -468,11 +468,10 @@ h1 .accent {
   letter-spacing: -0.01em;
 }
 
-.proof-body {
+.proof-head {
   display: flex;
-  align-items: flex-start;
-  gap: var(--s4);
-  margin-top: var(--s3);
+  align-items: center;
+  gap: var(--s3);
 }
 
 .proof-icon {
@@ -481,11 +480,12 @@ h1 .accent {
 }
 
 .proof-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
 }
 
 .proof p {
+  margin-top: var(--s3);
   font-size: var(--t-14);
   line-height: 1.6;
   color: var(--text-secondary);
@@ -841,8 +841,7 @@ a.wordmark:hover {
   color: var(--lime-hover);
 }
 
-.doc a:focus-visible,
-.form-legal a:focus-visible {
+.doc a:focus-visible {
   outline: 2px solid var(--lime);
   outline-offset: 2px;
   border-radius: 2px;
@@ -852,23 +851,6 @@ a.wordmark:hover {
   margin-top: var(--s8);
   padding-top: var(--s5);
   border-top: 1px solid var(--border);
-}
-
-/* Sits beside the form note, which gets overwritten by status messages. */
-.form-legal {
-  margin-top: var(--s1);
-  font-size: var(--t-13);
-  color: var(--text-muted);
-}
-
-.form-legal a {
-  color: var(--text-secondary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.form-legal a:hover {
-  color: var(--text);
 }
 
 /* -------------------------------------------------------------- motion */
