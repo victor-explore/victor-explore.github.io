@@ -263,10 +263,21 @@ h1 .accent {
   max-width: 32rem;
 }
 
+.platform-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
+}
+
+.platform-prompt {
+  font-size: var(--t-14);
+  color: var(--text-secondary);
+}
+
 .platform {
   display: flex;
   gap: var(--s2);
-  margin-bottom: var(--s3);
 }
 
 .pill {
@@ -927,7 +938,7 @@ a.wordmark:hover {
     margin-right: auto;
   }
 
-  .platform {
+  .platform-row {
     justify-content: center;
   }
 
