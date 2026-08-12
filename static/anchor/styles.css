@@ -260,25 +260,22 @@ h1 .accent {
 
 .signup {
   margin-top: var(--s7);
-  max-width: 26rem;
+  max-width: 30rem;
 }
 
-.platform-row {
-  display: flex;
+/* Prompts in the first column, controls in the second, so "I'm on" and
+   "Email me at" line up down the left edge. */
+.form-grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: var(--s3);
-  margin-bottom: var(--s3);
+  gap: var(--s3) var(--s4);
 }
 
-.platform-prompt,
 .field-prompt {
   font-size: var(--t-14);
   color: var(--text-secondary);
-}
-
-.field-prompt {
-  display: block;
-  margin-bottom: var(--s2);
+  white-space: nowrap;
 }
 
 .platform {
@@ -331,12 +328,6 @@ h1 .accent {
   color: var(--text-muted);
 }
 
-.field-row {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s3);
-}
-
 .field {
   min-width: 0;
 }
@@ -385,6 +376,7 @@ h1 .accent {
   justify-content: center;
   gap: var(--s2);
   width: 100%;
+  margin-top: var(--s4);
   padding: var(--s4) var(--s6);
   border: 0;
   border-radius: var(--radius-pill);
@@ -944,9 +936,6 @@ a.wordmark:hover {
     margin-right: auto;
   }
 
-  .platform-row {
-    justify-content: center;
-  }
 
   .phone-stage {
     order: -1;

@@ -66,8 +66,8 @@
               </p>
 
               <form class="signup reveal d4" id="signup" novalidate>
-                <div class="platform-row">
-                  <span class="platform-prompt">I&rsquo;m on</span>
+                <div class="form-grid">
+                  <span class="field-prompt">I&rsquo;m on</span>
                   <div class="platform" id="platform" role="radiogroup" aria-label="Which phone do you use?">
                     <button
                       class="pill"
@@ -90,11 +90,9 @@
                       Android
                     </button>
                   </div>
-                </div>
 
-                <div class="field-row">
+                  <label class="field-prompt" for="email">Email me at</label>
                   <div class="field">
-                    <label class="field-prompt" for="email">Email me at</label>
                     <input
                       id="email"
                       name="email"
@@ -105,14 +103,15 @@
                       aria-describedby="form-note"
                     />
                   </div>
-                  <button class="btn" type="submit" id="submit">
-                    <span id="submit-label">Tell me when it&rsquo;s live</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M5 12h14" />
-                      <path d="m13 6 6 6-6 6" />
-                    </svg>
-                  </button>
                 </div>
+
+                <button class="btn" type="submit" id="submit">
+                  <span id="submit-label">Tell me when it&rsquo;s live</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </button>
                 <p class="form-note" id="form-note" role="status">
                   One email the day it launches. Nothing else, ever.
                 </p>
