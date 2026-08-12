@@ -248,11 +248,70 @@ h1 .accent {
   color: var(--text-secondary);
 }
 
+.subhead-sub {
+  margin-top: var(--s4);
+  max-width: 32rem;
+  font-size: var(--t-15);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
 /* ----------------------------------------------------------------- form */
 
 .signup {
   margin-top: var(--s7);
   max-width: 32rem;
+}
+
+.platform {
+  display: flex;
+  gap: var(--s2);
+  margin-bottom: var(--s3);
+}
+
+.pill {
+  padding: var(--s2) var(--s5);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--t-14);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.pill:hover:not([aria-checked='true']) {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.pill[aria-checked='true'] {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--on-lime);
+  font-weight: 600;
+}
+
+.pill:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 2px;
+}
+
+.platform[aria-invalid='true'] .pill:not([aria-checked='true']) {
+  border-color: var(--error);
+}
+
+.platform.is-locked .pill {
+  pointer-events: none;
+}
+
+.platform.is-locked .pill:not([aria-checked='true']) {
+  border-color: var(--border);
+  color: var(--text-muted);
 }
 
 .field-row {
@@ -400,40 +459,33 @@ h1 .accent {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--s8);
-  counter-reset: step;
-}
-
-.proof {
-  counter-increment: step;
 }
 
 .proof h2 {
-  display: flex;
-  align-items: center;
-  gap: var(--s3);
   font-size: var(--t-17);
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
 }
 
-.proof h2::before {
-  content: counter(step);
+.proof-body {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--s6);
-  height: var(--s6);
+  align-items: flex-start;
+  gap: var(--s4);
+  margin-top: var(--s3);
+}
+
+.proof-icon {
   flex: none;
-  border-radius: 50%;
-  background: var(--lime-a16);
   color: var(--lime);
-  font-size: var(--t-12);
-  font-weight: 700;
+}
+
+.proof-icon svg {
+  width: 36px;
+  height: 36px;
 }
 
 .proof p {
-  margin-top: var(--s2);
   font-size: var(--t-14);
   line-height: 1.6;
   color: var(--text-secondary);
@@ -887,9 +939,14 @@ a.wordmark:hover {
   }
 
   .subhead,
+  .subhead-sub,
   .signup {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .platform {
+    justify-content: center;
   }
 
   .phone-stage {
