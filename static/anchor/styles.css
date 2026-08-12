@@ -276,6 +276,7 @@ h1 .accent {
   font-size: var(--t-14);
   color: var(--text-secondary);
   white-space: nowrap;
+  text-align: left;
 }
 
 .platform {
