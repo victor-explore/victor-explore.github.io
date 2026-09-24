@@ -17,7 +17,7 @@ LastCig is a quit-smoking app for Android. It helps you:
 
 Your quit-smoking data stays on your phone. There is no account and no sign-in.
 
-Get LastCig on [Google Play](https://play.google.com/store/search?q=LastCig&c=apps).
+Get LastCig on [Google Play](https://play.google.com/store/apps/details?id=com.lastcig.app).
 
 Follow LastCig on [Instagram](https://www.instagram.com/lastcig.app/) and [YouTube](https://www.youtube.com/@lastcigapp) for short videos on what smoking does to your body, and what happens when you stop.
 
