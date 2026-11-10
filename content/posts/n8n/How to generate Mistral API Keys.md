@@ -1,7 +1,7 @@
 ---
 title: "How to Generate Mistral API Keys"
 date: 2025-05-27
-draft: false
+draft: true
 description:
 url: "/posts/n8n/generate-mistral-api-keys/"
 tags: ["n8n", "automation", "workflow", "tutorial"]

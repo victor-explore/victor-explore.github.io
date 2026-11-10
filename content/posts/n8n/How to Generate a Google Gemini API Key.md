@@ -1,7 +1,7 @@
 ---
 title: "How to Generate a Google Gemini API Key"
 date: 2025-05-27
-draft: false
+draft: true
 description:
 url: "/posts/n8n/how-to-generate-a-google-gemini-api-key/"
 tags: ["n8n", "automation", "workflow", "tutorial"]

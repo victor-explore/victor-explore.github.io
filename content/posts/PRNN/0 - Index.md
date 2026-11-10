@@ -9,10 +9,8 @@ author:
 toc:
 weight: 1
 ---
-- [Hypothesis Space]({{< ref "/posts/PRNN/1 - Hypothesis space.md" >}})
 - [Loss Functions]({{< ref "/posts/PRNN/2 - Loss function.md" >}})
 - [Risk and Empirical Risk]({{< ref "/posts/PRNN/3 - Risk function.md" >}})
-- [Learning Problem]({{< ref "/posts/PRNN/4 - Learning problem.md" >}})
 - [KL Divergence - Kullback-Leibler Divergence]({{< ref "/posts/PRNN/6 - KL Divergence - Kullback-Leibler Divergence.md" >}})
 - [Minimizing KL Divergence is Equivalent to Maximizing Likelihood]({{< ref "/posts/PRNN/7 - Likelyhood.md" >}})
 - [Bayes Classifier]({{< ref "/posts/PRNN/5 - Bayes classifier.md" >}})
@@ -35,12 +33,10 @@ weight: 1
 - [Neural Networks]({{< ref "/posts/PRNN/25 - Neural network.md" >}})
 - [Backpropagation]({{< ref "/posts/PRNN/26 - Backpropogation.md" >}})
 - [Decision Trees]({{< ref "/posts/PRNN/28 - Descion trees.md" >}})
-- [Ensemble Learning]({{< ref "/posts/PRNN/29 - Ensemble learning.md" >}})
 - [Bagging and Random Forest]({{< ref "/posts/PRNN/30 - Bagging and random forest.md" >}})
 - [Boosting]({{< ref "/posts/PRNN/31 - Boosting.md" >}})
 - [XGBoost]({{< ref "/posts/PRNN/32 - XG Boost.md" >}})
 - [Adaboost]({{< ref "/posts/PRNN/33- Adaboost.md" >}})
-- [Unsupervised learning]({{< ref "/posts/PRNN/34 - Unsupervised learning.md" >}})
 - [Mixture model clustering also known as soft clustering]({{< ref "/posts/PRNN/34.1 - Soft clustering.md" >}})
 - [Principal Component Analysis (PCA)]({{< ref "/posts/PRNN/36 - PCA.md" >}})
 - [K-means Clustering]({{< ref "/posts/PRNN/35 - K means clustering.md" >}})

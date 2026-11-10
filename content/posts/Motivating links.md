@@ -1,7 +1,7 @@
 ---
 title: "Motivational links"
 date: 2025-02-01
-draft: false
+draft: true
 description:
 tags: []
 categories: []

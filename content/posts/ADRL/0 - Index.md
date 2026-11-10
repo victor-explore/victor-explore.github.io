@@ -25,7 +25,6 @@ weight: 1
 
 ## VAEs
 - [Variational encoding(VAEs)]({{< ref "/posts/ADRL/12 - Variational encoding.md" >}})
-- [Two types of neural networks]({{< ref "/posts/ADRL/12.1 - Two types of NNs.md" >}})
 - [Aggregated posterior mismatch]({{< ref "/posts/ADRL/13 - Aggregated posterior mismatch .md" >}})
 - [VAE as regularized autoencoder and Beta VAEs]({{< ref "/posts/ADRL/14 - VAE as regularized autoencoder.md" >}})
 - [Info VAEs]({{< ref "/posts/ADRL/14.1 Info VAE.md" >}})
@@ -35,7 +34,6 @@ weight: 1
 - [Denoising Diffusion Probabilistic Models (DDPM) - part 1]({{< ref "/posts/ADRL/16 - Denoising Diffusion Probabilistic Models (DDPM) - part 1.md" >}})
 - [Denoising Diffusion Probabilistic Models (DDPM) - part 2]({{< ref "/posts/ADRL/17 - Denoising Diffusion Probabilistic Models (DDPM) - part 2.md" >}})
 - [Denoising Diffusion Probabilistic Models (DDPM) - part 3]({{< ref "/posts/ADRL/18 - Denoising Diffusion Probabilistic Models(DDPM) - part 3.md" >}})
-- [Summarizing DDPM]({{< ref "/posts/ADRL/19 - Summarizing DDPM.md" >}})
 
 ## Score matching
 - [Score matching part 1]({{< ref "/posts/ADRL/20 - Score matching part 1.md" >}})
@@ -51,7 +49,6 @@ weight: 1
 - [Anderson's result]({{< ref "/posts/ADRL/26.2 Anderson's result.md" >}})
 - [DDPMs as SDE]({{< ref "/posts/ADRL/27 DDPM as SDEs.md" >}})
 - [SMLD as SDE]({{< ref "/posts/ADRL/28 - SMLD as SDE.md" >}})
-- [Main takeaway]({{< ref "/posts/ADRL/29 - Main takeaway.md" >}})
 - [DDIM]({{< ref "/posts/ADRL/30 - DDIM.md" >}})
 - [DDIM inversion]({{< ref "/posts/ADRL/31 - DDIM inversion.md" >}})
   
@@ -66,7 +63,6 @@ weight: 1
 - [JEPA - Joint Embedding Prediction and Autoencoding]({{< ref "/posts/ADRL/36 - JEPA.md" >}})
 
 ## Misc
-- [Distillation]({{< ref "/posts/ADRL/37 - Distillation.md" >}})
 
 ## Cheatsheet
 - [Cheatsheet]({{< relref "/posts/ADRL/Cheatsheet.md" >}})

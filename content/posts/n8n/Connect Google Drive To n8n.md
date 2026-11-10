@@ -1,7 +1,7 @@
 ---
 title: "How to Connect Google Drive To n8n"
 date: 2025-05-27
-draft: false
+draft: true
 description:
 url: "/posts/n8n/connect-google-drive-to-n8n/"
 tags: ["n8n", "automation", "workflow", "tutorial"]

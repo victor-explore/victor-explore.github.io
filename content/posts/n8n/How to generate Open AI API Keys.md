@@ -1,7 +1,7 @@
 ---
 title: "How to Generate Open AI API Keys"
 date: 2025-05-27
-draft: false
+draft: true
 description:
 url: "/posts/n8n/generate-open-ai-api-keys/"
 tags: ["n8n", "automation", "workflow", "tutorial"]

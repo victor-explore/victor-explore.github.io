@@ -1,7 +1,7 @@
 ---
 title: "Connect Supabase To n8n"
 date: 2025-05-27
-draft: false
+draft: true
 description:
 url: "/posts/n8n/connect-supabase-to-n8n/"
 tags: ["n8n", "automation", "workflow", "tutorial"]
