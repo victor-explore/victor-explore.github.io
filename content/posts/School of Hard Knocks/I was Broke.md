@@ -1,7 +1,7 @@
 ---
 title: "I Was Broke.. Found God.. Now I Make $15M/Year"
 date: 2025-05-25
-draft: false
+draft: true
 description:
 tags: []
 categories: []

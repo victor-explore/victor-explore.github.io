@@ -1,7 +1,7 @@
 ---
 title: "Asking Politicians How They Got Wealthy"
 date: 2025-05-24
-draft: false
+draft: true
 description:
 tags: []
 categories: []

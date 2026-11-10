@@ -1,7 +1,8 @@
-baseURL = 'https://victor-explore.github.io/'
+baseURL = 'https://www.victorexplore.com/'
 languageCode = 'en-us'
 title = 'Victor'
 theme = 'PaperMod'
+enableRobotsTXT = true
 
 [params]
   # Hugo removed site.Author; PaperMod's rss.xml falls back to it unless this is set.
@@ -18,8 +19,16 @@ theme = 'PaperMod'
   mainSections = ["posts"]
   enableDropdownMenu = true
 
+  # The home page: a short intro, then the newest posts.
+  [params.homeInfoParams]
+    Title = "Victor"
+    Content = "I build AI agents and I write down what I learn. Here you find my notes on machine learning, deep learning and reinforcement learning, step-by-step guides for n8n automation, and the things I make, like the [1000 Cuts game](https://1000cuts.victorexplore.com/) and the [LastCig app](/lastcig/)."
+
+  [params.footer]
+    text = "[About](/about/) · [Contact](/contact/) · [Privacy](/privacy/)"
+
   [params.profileMode]
-    enabled = true
+    enabled = false
     title = "Victor"
     subtitle = "I talk about AI"
     subtitle2 = "And share insights about technology, society, and personal growth"

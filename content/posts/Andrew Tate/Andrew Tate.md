@@ -1,7 +1,7 @@
 ---
 title: "Andrew Tate on Big Bedrooms"
 date: 2025-07-22
-draft: false
+draft: true
 description:
 tags: []
 categories: []

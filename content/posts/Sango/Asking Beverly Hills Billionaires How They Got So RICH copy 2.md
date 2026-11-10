@@ -1,7 +1,7 @@
 ---
 title: "How To Deal With Stress In Jobs ? | Baramati PSU Bank Manager Case"
 date: 2025-05-24
-draft: false
+draft: true
 description:
 tags: []
 categories: []
