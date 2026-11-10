@@ -2,7 +2,7 @@
 title: "Aggregated posterior mismatch"
 date: 2025-01-01
 draft: false
-description:
+description: "Why the aggregated posterior of a VAE does not match the prior, and why the EM algorithm does not have this problem."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "Applying RL to derive Optimal Policy for human behavior"
 date: 2025-05-25
 draft: false
-description:
+description: "Human behaviour modelled as a reinforcement learning problem: the world as the environment, the senses as observations and the brain as the policy."
 tags: []
 categories: []
 author:

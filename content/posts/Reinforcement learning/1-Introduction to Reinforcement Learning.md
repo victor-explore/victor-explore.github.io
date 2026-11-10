@@ -2,7 +2,7 @@
 title: "Introduction to Reinforcement Learning"
 date: 2025-01-01
 draft: false
-description:
+description: "The core idea of reinforcement learning, an agent that learns from reward, and the core problems of the field."
 tags: []
 categories: []
 author:
@@ -14,7 +14,7 @@ weight: 1
 
 Reinforcement Learning (RL) is a computational approach to learning whereby an **agent** seeks to maximize some notion of cumulative reward by taking actions in an **environment**. This process is akin to training a dog to perform a trick: you cannot dictate every move, but you can provide rewards when it performs correctly. In RL, the agent learns through trial and error, receiving feedback in the form of **rewards** or penalties based on its **actions**. The primary objective is to develop a **policy**, a strategy that guides the agent to take actions that maximize the total accumulated reward over time.
 
-![](/content/posts/RL/1.PNG)
+![](/images/posts/rl/1.png)
 
 Let's rigorously define the key components of a Reinforcement Learning system:
 
@@ -48,7 +48,7 @@ Let's rigorously define the key components of a Reinforcement Learning system:
     Maps states to probability distributions over actions: $\pi(a|s) = P(A_t=a|S_t=s)$
     Must satisfy: $\sum_{a \in \mathcal{A}} \pi(a|s) = 1, \forall s \in \mathcal{S}$
 
-![](/content/posts/RL/2..PNG)
+![](/images/posts/rl/2.png)
 
 - **Goal and Optimal Policy**: The agent aims to find an optimal policy $\pi^*$ that maximizes the expected cumulative reward (return) $G_t$:
 

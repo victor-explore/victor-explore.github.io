@@ -2,7 +2,7 @@
 title: "Bias variance tradeoff"
 date: 2025-01-01
 draft: false
-description:
+description: "How the average squared-error risk splits into bias, variance and irreducible noise, and what the tradeoff means."
 tags: []
 categories: []
 author:

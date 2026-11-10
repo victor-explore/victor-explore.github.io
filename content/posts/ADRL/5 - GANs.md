@@ -2,7 +2,7 @@
 title: "Generative Adversarial Networks (GANs)"
 date: 2025-01-01
 draft: false
-description:
+description: "GANs derived from F-divergence minimisation, and why the network is called adversarial."
 tags: []
 categories: []
 author:

@@ -1,8 +1,8 @@
 ---
 title: "Resources to keep up with AI"
 date: 2025-02-01
-draft: false
-description:
+draft: true
+description: "The YouTube channels and other sources I use to keep up with AI research and news, listed by platform."
 tags: []
 categories: []
 author:

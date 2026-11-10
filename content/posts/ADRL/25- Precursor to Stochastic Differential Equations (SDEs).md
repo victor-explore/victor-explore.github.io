@@ -2,7 +2,7 @@
 title: "Precursor: Stochastic Differential Equations (SDEs)"
 date: 2025-01-01
 draft: false
-description:
+description: "Why the sampling steps of Langevin dynamics, DDPM and SMLD are discrete versions of a continuous process, with worked examples."
 tags: []
 categories: []
 author:

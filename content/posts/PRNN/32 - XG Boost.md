@@ -2,7 +2,7 @@
 title: "XGBoost - Gradient boosted regression tree"
 date: 2025-01-01
 draft: false
-description:
+description: "How XGBoost builds decision trees one after another, each one correcting the errors of the trees before, step by step."
 tags: []
 categories: []
 author:

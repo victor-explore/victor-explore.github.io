@@ -2,7 +2,7 @@
 title: "Naive GANs"
 date: 2025-01-01
 draft: false
-description:
+description: "The original GAN: derivation from the general F-divergence form, how to read the objective, and how it is trained."
 tags: []
 categories: []
 author:

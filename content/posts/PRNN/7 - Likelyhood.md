@@ -1,7 +1,7 @@
 ---
 title: "Minimizing KL Divergence is Equivalent to Maxmimizing Likelihood"
 date: 2025-01-01
-draft: false
+draft: true
 description:
 tags: []
 categories: []

@@ -2,7 +2,7 @@
 title: "Convex conjugate"
 date: 2025-01-01
 draft: false
-description:
+description: "The convex conjugate (Fenchel conjugate): definition, properties, and why the conjugate of the conjugate gives the function back."
 tags: []
 categories: []
 author:

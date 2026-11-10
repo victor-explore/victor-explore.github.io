@@ -2,7 +2,7 @@
 title: "Conditional score matching"
 date: 2025-01-01
 draft: false
-description:
+description: "Score matching with labelled data: classifier guidance and classifier-free guidance."
 tags: []
 categories: []
 author:

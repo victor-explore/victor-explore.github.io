@@ -2,7 +2,7 @@
 title: "JEPA - Joint Embedding Prediction and Autoencoding"
 date: 2025-01-01
 draft: false
-description:
+description: "The JEPA framework: prediction in embedding space, the formulation, training and downstream use."
 tags: []
 categories: []
 author:

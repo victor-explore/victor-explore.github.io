@@ -2,7 +2,7 @@
 title: "Bayes classifier"
 date: 2025-01-01
 draft: false
-description:
+description: "The Bayes classifier, its notation, and why it is the best classifier for the 0-1 loss."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "Generative vs Discriminative Models"
 date: 2025-01-01
 draft: false
-description:
+description: "What a generative model learns, what a discriminative model learns, how the two differ, and what a conditional generative model is."
 tags:
 categories:
 author:

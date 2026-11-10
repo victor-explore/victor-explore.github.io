@@ -2,7 +2,7 @@
 title: "Expectation Maximization (EM) algorithm"
 date: 2025-01-01
 draft: false
-description:
+description: "The EM algorithm from latent variable models and variational inference: the ELBO, how it is made tight, and EM for Gaussian mixtures."
 tags: []
 categories: []
 author:

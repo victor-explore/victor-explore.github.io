@@ -2,7 +2,7 @@
 title: "Frechet Inception Distance (FID)"
 date: 2025-01-01
 draft: false
-description:
+description: "Why generative models cannot be evaluated like discriminative models, and what the Frechet Inception Distance measures."
 tags: []
 categories: []
 author:

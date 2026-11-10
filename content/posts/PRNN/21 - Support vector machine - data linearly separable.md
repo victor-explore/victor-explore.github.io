@@ -2,7 +2,7 @@
 title: "Support vector machine(SVM) when data is linearly separable"
 date: 2025-01-01
 draft: false
-description:
+description: "The support vector machine for linearly separable data: the optimisation problem, the dual form, and how to find w and b."
 tags: []
 categories: []
 author:

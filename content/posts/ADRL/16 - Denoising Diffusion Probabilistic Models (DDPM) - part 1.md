@@ -2,7 +2,7 @@
 title: "Denoising Diffusion Probabilistic Models (DDPM) - part 1"
 date: 2025-01-01
 draft: false
-description:
+description: "DDPM seen as a VAE with many latent variables: notation, the latent posterior and how the ELBO breaks into parts."
 tags: []
 categories: []
 author:

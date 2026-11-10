@@ -2,7 +2,7 @@
 title: "F-Divergence"
 date: 2025-01-01
 draft: false
-description:
+description: "F-divergence as a general measure of the difference between two probability distributions, with its main properties."
 tags: []
 categories: []
 author:

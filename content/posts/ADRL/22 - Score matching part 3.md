@@ -2,7 +2,7 @@
 title: "Score matching part 3"
 date: 2025-01-01
 draft: false
-description:
+description: "Denoising score matching, the reparameterisation that makes training efficient, and the data coverage problem."
 tags: []
 categories: []
 author:

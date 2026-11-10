@@ -2,7 +2,7 @@
 title: "Multi-Armed Bandit Problem"
 date: 2025-01-01
 draft: false
-description:
+description: "The multi-armed bandit problem: action-value methods, greedy and epsilon-greedy policies and incremental updates."
 tags: []
 categories: []
 author:
@@ -12,7 +12,7 @@ weight: 1
 
 ## Multi-Armed Bandit Problem
 
-![](/content/posts/RL/3..PNG)
+![](/images/posts/rl/3.png)
 
 The Multi-Armed Bandit problem is a fundamental concept in reinforcement learning, where an agent must repeatedly select from multiple options, known as "arms" (akin to slot machines), to maximize its cumulative reward. This scenario is simplified by the fact that the environment is **state-less**, meaning the outcome of an action is solely dependent on the action itself, without any influence from a changing state.
 
@@ -275,7 +275,7 @@ This means:
 
 - This theoretical framework of stochastic approximation is crucial because it provides the foundation for understanding why our incremental algorithms, like the action-value estimation update rule, converge to the true values even when we are dealing with noisy reward signals in reinforcement learning environments. The next section will explicitly show how action-value estimation fits into this stochastic approximation framework.
 
-![4](/content/posts/RL/4..PNG)
+![4](/images/posts/rl/4.png)
 
 ## Applying Stochastic Approximation to Action-Value Estimation
 

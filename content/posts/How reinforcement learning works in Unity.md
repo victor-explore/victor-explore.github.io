@@ -2,7 +2,7 @@
 title: "How reinforcement learning works in Unity"
 date: 2025-03-01
 draft: false
-description:
+description: "How reinforcement learning works in Unity: the packages, how Unity communicates with Python, and what to know before PPO."
 tags: []
 categories: []
 author:

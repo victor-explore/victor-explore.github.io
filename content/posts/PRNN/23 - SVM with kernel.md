@@ -2,7 +2,7 @@
 title: "SVM with kernel"
 date: 2025-01-01
 draft: false
-description:
+description: "The kernel trick and how it lets a support vector machine work in a higher-dimensional space without computing the feature map."
 tags: []
 categories: []
 author:

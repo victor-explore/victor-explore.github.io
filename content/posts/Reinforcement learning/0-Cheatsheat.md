@@ -2,7 +2,7 @@
 title: "Overview of Reinforcement Learning"
 date: 2025-05-09
 draft: false
-description:
+description: "An overview of reinforcement learning: the basic terms, the Markov decision process, the interaction loop and the aim, in maths."
 tags: []
 categories: []
 author:

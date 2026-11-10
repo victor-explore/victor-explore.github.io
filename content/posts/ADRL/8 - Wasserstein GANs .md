@@ -2,7 +2,7 @@
 title: "Wasserstein GANs (WGANs)"
 date: 2025-01-01
 draft: false
-description:
+description: "The perfect discriminator theorem, Wasserstein GANs, what k-Lipschitz means and how to enforce the 1-Lipschitz constraint."
 tags: []
 categories: []
 author:

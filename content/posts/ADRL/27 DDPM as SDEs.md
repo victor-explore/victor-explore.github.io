@@ -2,7 +2,7 @@
 title: "DDPMs as SDEs"
 date: 2025-01-01
 draft: false
-description:
+description: "How the DDPM forward process becomes a continuous SDE, how the SDE is reversed, and how the reverse SDE is made discrete again."
 tags: []
 categories: []
 author:

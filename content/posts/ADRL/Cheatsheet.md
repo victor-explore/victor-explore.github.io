@@ -2,7 +2,7 @@
 title: "Cheat sheet"
 date: 2025-01-01
 draft: false
-description:
+description: "A formula sheet for deep generative models: divergences, common probability distributions and the key results from the notes."
 tags: []
 categories: []
 author:

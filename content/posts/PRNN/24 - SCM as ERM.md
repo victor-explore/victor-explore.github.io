@@ -1,7 +1,7 @@
 ---
 title: "Support measure machine (SCM) as Empirical Risk Minimization (ERM)"
 date: 2025-01-01
-draft: false
+draft: true
 description:
 tags: []
 categories: []

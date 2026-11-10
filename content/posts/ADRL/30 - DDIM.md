@@ -2,7 +2,7 @@
 title: "DDIM (Denoising Diffusion Implicit Models)"
 date: 2025-01-01
 draft: false
-description:
+description: "Why DDPM inference needs many sequential steps, how DDIM gives up the Markov assumption, the derivation and how inference works."
 tags: []
 categories: []
 author:

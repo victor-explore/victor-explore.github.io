@@ -2,7 +2,7 @@
 title: "VAE as regularized autoencoder"
 date: 2025-01-01
 draft: false
-description:
+description: "How the VAE objective splits into a reconstruction error and a regulariser, the link to MAP estimation, and beta-VAEs."
 tags: []
 categories: []
 author:

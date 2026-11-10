@@ -2,7 +2,7 @@
 title: "State space models & Mamba"
 date: 2025-01-01
 draft: false
-description:
+description: "State space models from the linear form to Mamba: Euler's method, unrolling the equations and how the A matrix is initialised."
 tags: []
 categories: []
 author:

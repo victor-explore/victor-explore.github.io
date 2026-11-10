@@ -3,10 +3,13 @@ languageCode = 'en-us'
 title = 'Victor'
 theme = 'PaperMod'
 enableRobotsTXT = true
+# Only 3 posts had tags, so every tag and category page had 1 or 2 entries. No tag pages.
+disableKinds = ["taxonomy", "term"]
 
 [params]
   # Hugo removed site.Author; PaperMod's rss.xml falls back to it unless this is set.
   author = "Victor"
+  description = "Victor's notes on machine learning, deep learning and reinforcement learning, written so that the maths makes sense, and the things he builds with AI."
   math = true
   ShowPageNavigation = true
   ShowBreadCrumbs = false
@@ -17,12 +20,12 @@ enableRobotsTXT = true
   showtoc = true
   hideMeta = false
   mainSections = ["posts"]
-  enableDropdownMenu = true
+  enableDropdownMenu = false # static/js/dropdown.js does not exist; true made a 404 script on every page
 
   # The home page: a short intro, then the newest posts.
   [params.homeInfoParams]
     Title = "Victor"
-    Content = "I build AI agents and I write down what I learn. Here you find my notes on machine learning, deep learning and reinforcement learning, step-by-step guides for n8n automation, and the things I make, like the [1000 Cuts game](https://1000cuts.victorexplore.com/) and the [LastCig app](/lastcig/)."
+    Content = "I build AI agents and I write down what I learn. Here you find my notes on machine learning, deep learning and reinforcement learning, written so that the maths makes sense, and the things I make, like the [1000 Cuts game](https://1000cuts.victorexplore.com/) and the [LastCig app](/lastcig/)."
 
   [params.footer]
     text = "[About](/about/) · [Contact](/contact/) · [Privacy](/privacy/)"
@@ -56,11 +59,15 @@ enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
-    identifier = "buy-ai-agents"
-    name = "🛒 Buy AI Agents"
-    url = "https://shop.victorexplore.com/"
+    identifier = "posts"
+    name = "📝 Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
     weight = 15
-    params = { newTab = true }
   [[menu.main]]
     identifier = "ai-agent-builder-community"
     name = "🤖 AI Agent Builder Community"
@@ -73,11 +80,6 @@ enableRobotsTXT = true
     url = "https://discord.com/invite/QHAbprqQme"
     weight = 25
     params = { newTab = true }
-  [[menu.main]]
-    identifier = "posts"
-    name = "📝 Posts"
-    url = "/posts/"
-    weight = 30
 
 [markup]
   [markup.goldmark]

@@ -2,7 +2,7 @@
 title: "Parzen window estimate"
 date: 2025-01-01
 draft: false
-description:
+description: "The Parzen window (kernel density) estimate: the idea, the uniform and Gaussian kernels, and the algorithm."
 tags: []
 categories: []
 author:

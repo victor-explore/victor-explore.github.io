@@ -2,7 +2,7 @@
 title: "Support vector machine(SVM) when data is not linearly separable"
 date: 2025-01-01
 draft: false
-description:
+description: "The soft-margin support vector machine for data that is not linearly separable: slack variables, the dual form, and how to find w and b."
 tags: []
 categories: []
 author:

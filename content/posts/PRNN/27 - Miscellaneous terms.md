@@ -2,7 +2,7 @@
 title: "Miscellaneous Machine Learning Terms"
 date: 2025-01-01
 draft: false
-description:
+description: "Short definitions of common machine learning terms: epoch, batch size and the variants of gradient descent."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "Noise Contrastive Estimation"
 date: 2025-01-01
 draft: false
-description:
+description: "The idea behind noise contrastive estimation: learn a distribution by learning to tell its samples from noise, with the formulation."
 tags: []
 categories: []
 author:

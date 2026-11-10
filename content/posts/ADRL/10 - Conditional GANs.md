@@ -2,7 +2,7 @@
 title: "Conditional GANs(cGANs)"
 date: 2025-01-01
 draft: false
-description:
+description: "How a conditional GAN feeds extra information such as class labels to the generator and the discriminator, with the objective and the training steps."
 tags: []
 categories: []
 author:

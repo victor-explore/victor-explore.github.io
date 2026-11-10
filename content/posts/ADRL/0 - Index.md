@@ -2,7 +2,7 @@
 title: "Index for Deep Learning Topics"
 date: 2025-01-01
 draft: false
-description:
+description: "A list of my deep learning notes in order: divergences, GANs, VAEs, diffusion models, score matching, SDEs and sequence models."
 tags: []
 categories: []
 author:
@@ -28,7 +28,6 @@ weight: 1
 - [Aggregated posterior mismatch]({{< ref "/posts/ADRL/13 - Aggregated posterior mismatch .md" >}})
 - [VAE as regularized autoencoder and Beta VAEs]({{< ref "/posts/ADRL/14 - VAE as regularized autoencoder.md" >}})
 - [Info VAEs]({{< ref "/posts/ADRL/14.1 Info VAE.md" >}})
-- [Vector Quantized VAEs (VQ-VAEs)]({{< ref "/posts/ADRL/15 - VQVAE.md" >}})
 
 ## DDPM
 - [Denoising Diffusion Probabilistic Models (DDPM) - part 1]({{< ref "/posts/ADRL/16 - Denoising Diffusion Probabilistic Models (DDPM) - part 1.md" >}})
@@ -45,12 +44,9 @@ weight: 1
 ## SDEs
 - [Precursor to Stochastic Differential Equations (SDEs)]({{< ref "/posts/ADRL/25- Precursor to Stochastic Differential Equations (SDEs).md" >}})
 - [Stochastic Differential Equations (SDEs)]({{< ref "/posts/ADRL/26 - Stochastic Differential Equations (SDEs).md" >}})
-- [Some example problems]({{< ref "/posts/ADRL/26.1 - Some example problems.md" >}})
-- [Anderson's result]({{< ref "/posts/ADRL/26.2 Anderson's result.md" >}})
 - [DDPMs as SDE]({{< ref "/posts/ADRL/27 DDPM as SDEs.md" >}})
 - [SMLD as SDE]({{< ref "/posts/ADRL/28 - SMLD as SDE.md" >}})
 - [DDIM]({{< ref "/posts/ADRL/30 - DDIM.md" >}})
-- [DDIM inversion]({{< ref "/posts/ADRL/31 - DDIM inversion.md" >}})
   
 ## Sequence2sequence models
 - [Transformers]({{< ref "/posts/ADRL/Transformers/31.5.md" >}})
@@ -58,8 +54,6 @@ weight: 1
 
 ## Self supervised learning
 - [Noise contrastive estimation]({{< ref "/posts/ADRL/33 - Noise contrastive estimation.md" >}})
-- [Info-NCE]({{< ref "/posts/ADRL/34 - Info-NCE.md" >}})
-- [Masked reconstruction]({{< ref "/posts/ADRL/35 - Masked reconstruction.md" >}})
 - [JEPA - Joint Embedding Prediction and Autoencoding]({{< ref "/posts/ADRL/36 - JEPA.md" >}})
 
 ## Misc

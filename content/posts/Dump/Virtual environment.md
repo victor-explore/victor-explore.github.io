@@ -2,7 +2,7 @@
 title: "Why we need a virtual environment"
 date: 2025-02-01 
 draft: false
-description:
+description: "Why Python projects need a virtual environment, built up from what a module and a package are."
 tags: []
 categories: []
 author:

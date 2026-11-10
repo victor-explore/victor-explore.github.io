@@ -1,7 +1,7 @@
 ---
 title: "Logistic regression also known as logit regression or binary classification"
 date: 2025-01-01
-draft: false
+draft: true
 description:
 tags: []
 categories: []

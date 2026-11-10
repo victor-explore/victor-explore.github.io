@@ -2,7 +2,7 @@
 title: "Decision Trees"
 date: 2025-01-01
 draft: false
-description:
+description: "How a decision tree splits data, how it is grown with Gini impurity or mean squared error, and how it is pruned."
 tags: []
 categories: []
 author:

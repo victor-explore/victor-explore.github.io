@@ -2,7 +2,7 @@
 title: "Denoising Diffusion Probabilistic Models (DDPM) - part 3"
 date: 2025-01-01
 draft: false
-description:
+description: "The DDPM reparameterisation, the architecture, and the training and inference steps."
 tags: []
 categories: []
 author:

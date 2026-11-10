@@ -2,7 +2,7 @@
 title: "Denoising Diffusion Probabilistic Models (DDPM) - part 2"
 date: 2025-01-01
 draft: false
-description:
+description: "The three parts of the DDPM ELBO explained: the reconstruction term, the prior matching term and the denoising matching term."
 tags: []
 categories: []
 author:

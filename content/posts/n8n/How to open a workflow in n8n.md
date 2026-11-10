@@ -1,7 +1,7 @@
 ---
 title: "How to open a workflow in n8n"
 date: 2025-05-27
-draft: false
+draft: true
 description: "A step-by-step guide to opening a workflow in n8n"
 url: "/posts/n8n/open-workflow-guide/"
 tags: ["n8n", "automation", "workflow", "tutorial"]

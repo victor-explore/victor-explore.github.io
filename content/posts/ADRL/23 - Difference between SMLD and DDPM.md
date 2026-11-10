@@ -2,7 +2,7 @@
 title: "Difference between SMLD and DDPM"
 date: 2025-01-01
 draft: false
-description:
+description: "How SMLD (noise conditional score networks) and DDPM differ in the forward process and in inference."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "What is Retrieval Augmented Generation? (RAG)"
 date: 2025-05-24
 draft: false
-description:
+description: "What retrieval augmented generation is, which limits of large language models it addresses, and how it works."
 tags: []
 categories: []
 author:

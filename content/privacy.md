@@ -15,7 +15,8 @@ This policy covers the website `www.victorexplore.com` and the 1000 Cuts game at
 
 ## This website
 
-- The website has no accounts and no forms. We do not ask for your name or email address.
+- The blog has no accounts. It does not ask for your name or email address.
+- One page, [Anchor](/anchor/), has a waitlist form. If you fill it in, your email address goes to Kit, the email service that keeps the list. That page has [its own policy](/anchor/privacy/).
 - GitHub Pages hosts the website. GitHub receives technical data, such as your IP address, when your browser loads a page. See the [GitHub privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 - Pages with maths load a script from the jsDelivr network. jsDelivr receives your IP address when that occurs.
 - Your browser keeps two small settings on your device: the light or dark theme, and the menu position. These do not leave your device.

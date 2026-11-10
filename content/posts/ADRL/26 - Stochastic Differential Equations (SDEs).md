@@ -2,7 +2,7 @@
 title: "Stochastic Differential Equations (SDEs)"
 date: 2025-01-01
 draft: false
-description:
+description: "An introduction to stochastic differential equations for diffusion models: the formal definition and what Brownian motion is and is not."
 tags: []
 categories: []
 author:

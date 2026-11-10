@@ -2,7 +2,7 @@
 title: "Domain adversarial networks (DANs)"
 date: 2025-01-01
 draft: false
-description:
+description: "How domain adversarial networks learn features that work across domains: the feature extractor, the domain discriminator and the training objective."
 tags: []
 categories: []
 author:

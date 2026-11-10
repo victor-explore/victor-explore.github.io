@@ -2,7 +2,7 @@
 title: "Boosting"
 date: 2025-01-01
 draft: false
-description:
+description: "How boosting trains models one after another, each one correcting the errors of the ones before, with the maths."
 tags: []
 categories: []
 author:

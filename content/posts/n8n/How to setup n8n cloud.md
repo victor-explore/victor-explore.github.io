@@ -1,7 +1,7 @@
 ---
 title: "How to setup n8n cloud"
 date: 2025-05-27
-draft: false
+draft: true
 description: "A step-by-step guide to setting up n8n cloud platform for workflow automation"
 url: "/posts/n8n/setup-n8n-cloud-guide/"
 tags: ["n8n", "automation", "workflow", "cloud", "tutorial"]

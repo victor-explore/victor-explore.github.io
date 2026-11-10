@@ -2,7 +2,7 @@
 title: "Wasserstein metric"
 date: 2025-01-01
 draft: false
-description:
+description: "The Wasserstein distance between two distributions: definition, properties and how it relates to KL divergence."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "Neural network"
 date: 2025-01-01
 draft: false
-description:
+description: "A neural network defined as a composition of functions, with the common non-linear activation functions."
 tags: []
 categories: []
 author:

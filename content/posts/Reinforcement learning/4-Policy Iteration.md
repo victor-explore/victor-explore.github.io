@@ -2,7 +2,7 @@
 title: "Policy Iteration"
 date: 2025-01-01
 draft: false
-description:
+description: "Policy iteration and modified policy iteration: the algorithm, the key proposition and convergence."
 tags: []
 categories: []
 author:

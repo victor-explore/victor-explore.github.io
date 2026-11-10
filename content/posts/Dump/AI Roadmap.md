@@ -2,7 +2,7 @@
 title: "AI Roadmap"
 date: 2025-02-01
 draft: false
-description:
+description: "The step-by-step roadmap I made for my younger brother to learn AI: maths, coding, machine learning and what to do after."
 tags: []
 categories: []
 author:

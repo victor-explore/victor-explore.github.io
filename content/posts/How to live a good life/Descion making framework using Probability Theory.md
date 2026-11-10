@@ -2,7 +2,7 @@
 title: "Decision making framework using probability theory"
 date: 2025-06-29
 draft: false
-description:
+description: "A framework for making decisions under uncertainty with probability theory: actions, outcomes and how to choose between them."
 tags: []
 categories: []
 author:

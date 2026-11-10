@@ -2,7 +2,7 @@
 title: "Linear regression"
 date: 2025-01-01
 draft: false
-description:
+description: "Linear regression from the ideal regressor: its derivation, how to read it, and empirical risk minimisation."
 tags: []
 categories: []
 author:

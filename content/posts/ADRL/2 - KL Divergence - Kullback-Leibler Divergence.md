@@ -2,7 +2,7 @@
 title: "KL Divergence - Kullback-Leibler Divergence"
 date: 2025-01-01
 draft: false
-description:
+description: "KL divergence with intuition and properties, and why minimising it is the same as maximising likelihood."
 tags: []
 categories: []
 author:

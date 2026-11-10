@@ -2,7 +2,7 @@
 title: "Value Iteration"
 date: 2025-01-01
 draft: false
-description:
+description: "Value iteration for stochastic shortest path problems: the dynamic programming operator, its properties and the Gauss-Seidel variant."
 tags: []
 categories: []
 author:

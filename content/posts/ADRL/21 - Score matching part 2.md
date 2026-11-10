@@ -2,7 +2,7 @@
 title: "Score matching part 2"
 date: 2025-01-01
 draft: false
-description:
+description: "Why the trace term in implicit score matching is a problem, and how projected and sliced score matching avoid it."
 tags: []
 categories: []
 author:

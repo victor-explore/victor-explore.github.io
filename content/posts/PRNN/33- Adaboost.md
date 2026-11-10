@@ -2,7 +2,7 @@
 title: "Adaboost"
 date: 2025-01-01
 draft: false
-description:
+description: "AdaBoost derived from the general boosting form: the problem setting, how the step size is found and the full algorithm."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: Linear Discriminant Analysis(LDA)
 date: 2025-01-01
 draft: false
-description:
+description: "Linear discriminant analysis derived from Gaussian class-conditional densities for two classes."
 tags: []
 categories: []
 author:

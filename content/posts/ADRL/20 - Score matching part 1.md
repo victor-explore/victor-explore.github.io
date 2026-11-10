@@ -2,7 +2,7 @@
 title: "Score matching part 1"
 date: 2025-01-01
 draft: false
-description:
+description: "Sampling seen as optimisation, the score function, and explicit and implicit score matching."
 tags: []
 categories: []
 author:

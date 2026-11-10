@@ -2,7 +2,7 @@
 title: "K-means clustering"
 date: 2025-01-01
 draft: false
-description:
+description: "K-means as hard clustering, derived from mixture model clustering, with the algorithm."
 tags: []
 categories: []
 author:

@@ -2,7 +2,7 @@
 title: "Variational encoding(VAEs)"
 date: 2025-01-01
 draft: false
-description:
+description: "Variational autoencoders from the start: the problem setting, the model, and why and how the reparameterisation trick is used."
 tags: []
 categories: []
 author:
