@@ -1054,7 +1054,3 @@ Better world models lead to better decisions, which compound over time. The earl
 - Humility (acknowledging model uncertainty) leads to better outcomes
 
 The human journey can be seen as a continuous process of refining our world model to better navigate reality and maximize both immediate and long-term rewards.
-
-
-## Will add later
-- There are some space that have high value function, for example being born righ

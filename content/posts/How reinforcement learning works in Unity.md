@@ -188,14 +188,3 @@ The Critic provides feedback (often in the form of an advantage estimate) to the
 
 ### Online Training
 No need for experience replay buffer.
-
-
-## My setup
-
-### State Space
-
-### Action Space
-
-### Reward Function
-
-

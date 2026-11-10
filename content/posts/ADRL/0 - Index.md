@@ -1,5 +1,5 @@
 ---
-title: "Index for Deep Learning Topics"
+title: "Deep learning and generative models notes: index"
 date: 2025-01-01
 draft: false
 description: "A list of my deep learning notes in order: divergences, GANs, VAEs, diffusion models, score matching, SDEs and sequence models."

@@ -80,8 +80,6 @@ weight: 1
     - Continuous SDE to continuous reverse SDE
     - Continuous reverse SDE to discrete reverse process
 
-  - **DDIM**: Left
-  - **State space model**: Left
 
   - **Self supervised learning**:
     - **Noise contrastive estimation**: $J(\theta) = \frac{1}{2} \mathbb{E} [\log \sigma(\log p_\theta(x) - \log p_N(x)) + \log(1-\sigma(\log p_\theta(y) - \log p_N(y)))]$

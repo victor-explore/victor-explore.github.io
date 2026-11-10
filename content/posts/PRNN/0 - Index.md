@@ -1,5 +1,5 @@
 ---
-title: "Index for Artificial Intelligence Topics"
+title: "Machine learning notes: index"
 date: 2025-01-01
 draft: false
 description: "A list of my machine learning notes in order: classifiers, regression, density estimation, SVMs, neural networks, trees, boosting and clustering."
